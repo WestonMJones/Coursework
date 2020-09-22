@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Web Systems jQuery and jQuery UI Examples</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var jq = jQuery.noConflict();
+	jq(document).ready(function(){
+		/*
+		 * When the button's onclick event is fired,
+		 * hides all a elements without a href="#".
+		 *
+		 */
+		jq("button#hideA").click(function(){
+			jq("a.[href!='#']").hide();
+		});
+
+		/*
+		 * When the button's onclick event is fired,
+		 * hides all a elements with self referenced href.
+		 *
+		 */
+		jq("button#hideOnlyA").click(function(){
+			jq("a.[href='#']").hide();
+		});
+
+		/*
+		 * When the button's onclick event is fired,
+		 * shows all a elements.
+		 *
+		 */
+		jq("button#reset").click(function(){
+			jq("a").show();
+		});
+
+		/*
+		 * Uses the jQuery slideToggle effect to slide up all pre
+		 * elements if display = none, or slide down all pre elements
+		 * if display != none, when the button with id = 'toggleJQCode' is clicked.
+		 *
+		 */
+		jq("button#toggleJQCode").click(function() {
+			jq("pre").slideToggle();
+		});
+	});
+</script>
+<style type="text/css">
+	body {
+		font-size:1.2em;
+	}
+	pre {
+		display:none;
+	}
+	button {
+		margin-bottom:10px;
+		cursor:pointer;
+	}
+	#hidden {
+		display:none;
+	}
+	#home {
+		float:right;
+		font-size:1.2em;
+		padding-right:20px;
+	}
+</style>
+</head>
+<body>
+	<a href="examples.html" id="home">Home</a>
+    <h1>Attribute Selectors Example</h1>
+
+    <ul class="exLinks">
+        <li><a href="#">I do nothing!</a></li>
+        <li><a href="#">Me either!</a></li>
+        <li><a href="examples.html">Go back to home page</a></li>
+        <li><a href="#">Just another link going nowhere.</a></li>
+    </ul>
+
+
+    <button id="hideOnlyA">Hide all a elements with href='#'</button>
+
+    <button id="hideA">Hide all a elements with href !='#'</button>
+
+    <button id="reset">Show all a elements</button>
+
+    <button id="toggleJQCode">Click to toggle the jQuery code!</button>
+
+    <pre>
+        <code>
+            var jq = jQuery.noConflict();
+            jq(document).ready(function(){
+                /*
+                 * When the button's onclick event is fired,
+                 * hides all p elements.
+                 *
+                 */
+                jq("button#hideA").click(function(){
+                    jq("[href!='#']").hide();
+                });
+
+                /*
+                 * When the button's onclick event is fired,
+                 * hides all p elements with class 'sample2'.
+                 *
+                 */
+                jq("button#hideOnlyA").click(function(){
+                    jq("[href='#']").hide();
+                });
+
+                /*
+                 * When the button's onclick event is fired,
+                 * shows all p elements.
+                 *
+                 */
+                jq("button#reset").click(function(){
+                    jq("a").show();
+                });
+
+                /*
+                 * Uses the jQuery slideToggle effect to slide up all pre
+                 * elements if display = none, or slide down all pre elements
+                 * if display != none, when the button with id = 'toggleJQCode' is clicked.
+                 *
+                 */
+                jq("button#toggleJQCode").click(function() {
+                    jq("pre").slideToggle();
+                });
+            });
+        </code>
+    </pre>
+</body>
+</html>

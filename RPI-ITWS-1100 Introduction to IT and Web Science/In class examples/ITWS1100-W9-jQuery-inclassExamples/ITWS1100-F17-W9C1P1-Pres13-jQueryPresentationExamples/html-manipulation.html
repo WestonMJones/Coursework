@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Web Systems jQuery and jQuery UI Examples</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var jq = jQuery.noConflict();
+	jq(document).ready(function(){
+		/*
+		 * When the element with id 'addP' is clicked, 
+		 * <p>I am a new h3 element!</p> is added after
+		 * all h1 elements.
+		 *
+		 */
+		jq("#addP").click(function() {
+			jq("h1").after("<p>I am a new p element!</p>");
+		});
+		
+		/* 
+		 * When the element with id 'addP' is clicked, 
+		 * the text 'sentence.' is added after
+		 * at the end of the  p element with
+		 * id = 'appendText.
+		 *
+		 */
+		jq("#appendText").click(function() {
+			jq("#incomplete").append("sentence.");
+		});
+		
+		/* 
+		 * When the element with id 'appendNewP' is clicked, 
+		 * <p>I am a new p element!</p> is added after
+		 * inside the div with id = 'appendNewP'.
+		 *
+		 */
+		jq("#appendNewP").click(function() {
+			jq("#emptyDiv").append("<p>I am a new p element inside the empty div!</p>");
+		});
+		
+		/* Toggle the view of the code */
+		jq("button#toggleJQCode").click(function() {
+			jq("pre").slideToggle();
+		});
+	});
+</script>
+<style type="text/css">
+	body {
+		font-size:1.2em;	
+	}
+	button {
+		display:inline;
+		margin-bottom:10px;
+		cursor:pointer;
+	}
+	pre {
+		display:none;
+	}
+	#home {
+		float:right;
+		font-size:1.2em;
+		padding-right:20px;	
+	}
+</style>
+</head>
+<body>
+	<a href="examples.html" id="home">Home</a>
+    
+	<h1>HTML Manipulation Example</h1>
+    
+    <p id="incomplete">This is an incomplete </p>
+    
+    <div id="emptyDiv"></div>
+    <button id="addP">Add a p element</button>
+    <button id="appendText">Append text to the p element</button>
+    <button id="appendNewP">Append new p elements in 'emptyDiv' div</button>
+    <button id="toggleJQCode">Toggle Code</button>
+    <pre>
+    	<code>
+        	var jq = jQuery.noConflict();
+            jq(document).ready(function(){
+                /*
+                 * When the element with id 'addP' is clicked, 
+                 * <p>I am a new h3 element!</p> is added after
+                 * all h1 elements.
+                 *
+                 */
+                jq("#addP").click(function() {
+                    jq("h1").after("<p>I am a new p element!</p>");
+                });
+                
+                /* 
+                 * When the element with id 'addP' is clicked, 
+                 * the text 'sentence.' is added after
+                 * at the end of the  p element with
+                 * id = 'appendText.
+                 *
+                 */
+                jq("#appendText").click(function() {
+                    jq("#incomplete").append("sentence.");
+                });
+                
+                /* 
+                 * When the element with id 'appendNewP' is clicked, 
+                 * <p>I am a new p element!</p> is added after
+                 * inside the div with id = 'appendNewP'.
+                 *
+                 */
+                jq("#appendNewP").click(function() {
+                    jq("#emptyDiv").append("<p>I am a new p element inside the empty div!</p>");
+                });
+                
+                /* Toggle the view of the code */
+                jq("button#toggleJQCode").click(function() {
+                    jq("pre").slideToggle();
+                });
+            });
+        </code>
+	</pre>
+</body>
+</html>

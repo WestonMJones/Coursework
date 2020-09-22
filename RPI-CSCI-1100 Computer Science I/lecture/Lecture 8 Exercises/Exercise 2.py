@@ -1,0 +1,12 @@
+values = [ 14, 10, 8, 19, 7, 13 ]
+input1 = int(input("Enter a value: "))
+print(input1)
+values.append(input1)
+input2 = int(input("Enter another value: "))
+print(input2)
+values.insert(1,input2)
+print(values[3],values[-1])
+print("Difference:",max(values)-min(values))
+print("Average:",round((sum(values)/len(values)             )      ,1))
+values.sort()
+print("Median:",(values[3]+values[4])/2)

@@ -1,0 +1,6 @@
+This was another simple, straightforward lab.
+
+The provided template made everything pretty easy to understand, but I feel like this was a good test of our ability
+to do common tasks with jquery.
+
+Link to webpage: https://afsws.rpi.edu/AFS/home/08/jonesw3/public_html/iit/resources/pages/project_resources/lab6/lab6.html#

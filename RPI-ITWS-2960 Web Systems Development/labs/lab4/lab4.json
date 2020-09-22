@@ -1,0 +1,60 @@
+{
+    "title": "Songs",
+    "description": "My favorite songs",
+    "items": [
+        {
+          "track_name": "Caught In The Middle",
+          "artist":"Paramore",
+          "album": "After Laughter",
+          "cover_art":"https://cps-static.rovicorp.com/3/JPG_500/MI0004/228/MI0004228504.jpg?partner=allrovi.com",
+          "date":"2017",
+          "website":"http://www.paramore.net",
+          "genres":["Rock", "Electropop"]
+        },
+        {
+          "track_name": "Ribs",
+          "artist":"Lorde",
+          "album": "Pure Heroine",
+          "cover_art":"https://cps-static.rovicorp.com/3/JPG_500/MI0003/624/MI0003624281.jpg?partner=allrovi.com",
+          "date":"2013",
+          "website":"https://lorde.co.nz/",
+          "genres":["Indie","Electropop"]
+        },
+        {
+          "track_name": "Sincrerity is Scary",
+          "artist":"The 1975",
+          "album": "A Brief Inquiry Into Online Relationships",
+          "cover_art":"https://cps-static.rovicorp.com/3/JPG_1080/MI0004/483/MI0004483160.jpg?partner=allrovi.com",
+          "date":"2018",
+          "website":"https://the1975.com/",
+          "genres":["Rock","Pop"]
+        },
+        {
+          "track_name": "Too Much to Dream",
+          "artist":"Allie X",
+          "album": "Collxtion II",
+          "cover_art":"https://cps-static.rovicorp.com/3/JPG_500/MI0004/249/MI0004249126.jpg?partner=allrovi.com",
+          "date":"2017",
+          "website":"http://alliex.com/",
+          "genres":["Pop"]
+        },
+        {
+          "track_name": "Dancing's Not a Crime",
+          "artist":"Panic! At The Disco",
+          "album": "Pray for the Wicked",
+          "cover_art":"https://cdn-s3.allmusic.com/release-covers/500/0004/890/0004890050.jpg",
+          "date":"2018",
+          "website":"https://panicatthedisco.com/",
+          "genres":["Pop"]
+        },
+        {
+          "track_name": "Dreams Tonight",
+          "artist":"Alvvays",
+          "album": "Antisocialities",
+          "cover_art":"https://cps-static.rovicorp.com/3/JPG_500/MI0004/293/MI0004293716.jpg?partner=allrovi.com",
+          "date":"2017",
+          "website":"http://alvvays.com/",
+          "genres":["Alternative","Indie"]
+        }
+    ]
+}

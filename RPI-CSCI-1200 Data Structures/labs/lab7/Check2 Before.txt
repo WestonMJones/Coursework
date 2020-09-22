@@ -1,0 +1,29 @@
+~~Dr.M~~ Dr. Memory version 1.11.0
+~~Dr.M~~ Running "Ugh.exe"
+elements:  4 3 2 1 0
+~~Dr.M~~
+~~Dr.M~~ Error #1: UNADDRESSABLE ACCESS: reading 4 byte(s)
+~~Dr.M~~ # 0 list_iterator<>::operator--               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/labs/lab7/dslist.h:59]
+~~Dr.M~~ # 1 main                                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/labs/lab7/lab7.cpp:65]
+~~Dr.M~~
+~~Dr.M~~ Error #2: LEAK 12 direct bytes + 48 indirect bytes
+~~Dr.M~~ # 0 replace_operator_new                                  [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 __gnu_cxx::new_allocator<>::allocate                  [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 std::__cxx11::_List_base<>::_M_get_node               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_list.h:392]
+~~Dr.M~~ # 3 std::__cxx11::list<>::_M_create_node                  [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_list.h:553]
+~~Dr.M~~ # 4 std::__cxx11::list<>::_M_insert                       [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_list.h:1754]
+~~Dr.M~~ # 5 std::__cxx11::list<>::push_back                       [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_list.h:1089]
+~~Dr.M~~ # 6 main                                                  [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/labs/lab7/lab7.cpp:41]
+~~Dr.M~~
+~~Dr.M~~ ERRORS FOUND:
+~~Dr.M~~       1 unique,     1 total unaddressable access(es)
+~~Dr.M~~       0 unique,     0 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       0 unique,     0 total warning(s)
+~~Dr.M~~       1 unique,     1 total,     60 byte(s) of leak(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-Ugh.exe.6152.000\results.txt
+~~Dr.M~~ WARNING: application exited with abnormal code 0xc0000005
+Segmentation fault

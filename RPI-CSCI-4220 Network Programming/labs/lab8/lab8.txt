@@ -1,0 +1,83 @@
+1. Is your browser running HTTP version 1.0 or 1.1? What version of HTTP is the server running?
+
+	Both are running 1.1 I think
+
+2. What languages (if any) does your browser indicate that it can accept to the server?
+
+	en-US, en, and something called q=.9
+
+3. What is the IP address of your computer? Of the gaia.cs.umass.edu server?
+	
+	My machine: 129.161.144.56
+	Server 128.119.245.12
+
+4. What is the status code returned from the server to your browser? (ignore the favicon.ico request)
+	
+	200.
+
+5. When was the HTML file that you are retrieving last modified at the server?
+
+	Fri 09 Nov 2018 6:59:02 GMT
+
+6. How many bytes of content are being returned to your browser?
+
+	128 bytes.
+
+7. By inspecting the raw data in the packet content window, do you see any headers within the data that
+are not displayed in the packet-listing window? If so, name one.
+
+	Nope.
+
+8. Inspect the contents of the first HTTP GET request from your browser to the server. Do you see an
+“IF-MODIFIED-SINCE” line in the HTTP GET?
+
+	Not in the first GET, but in the second. FRI, 09 Nov 2018 6:59:02 gmt	
+
+9. Inspect the contents of the server response. Did the server explicitly return the contents of the file?
+How can you tell?
+
+	Yes. In the 200 OK Packet, there is the specific HTML "Congratulations, etc"
+
+10. Now inspect the contents of the second HTTP GET request from your browser to the server. Do
+you see an “IF-MODIFIED-SINCE:” line in the HTTP GET? If so, what information follows the
+“IF-MODIFIED-SINCE:” header?
+
+	Yes, it says FRI, 09 NOV 2018 6:59:02
+
+11. What is the HTTP status code and phrase returned from the server in response to this second HTTP
+GET? Did the server explicitly return the contents of the file? Explain.
+
+	304 Not modified. Did not return the contents of the file.
+
+
+12. How many HTTP GET request messages did your browser send? Which packet number in the trace
+contains the GET message for the Bill or Rights?
+
+	Just one. For me, it was 61. 
+
+13. Which packet number in the trace contains the status code and phrase associated with the response to
+the HTTP GET request?
+
+	67, it's a 200 OK
+
+14. What is the status code and phrase in the response?
+
+	200 OK
+
+15. How many data-containing TCP segments were needed to carry the single HTTP response and the text
+of the Bill of Rights?
+
+	3.They were packets 64, 65, 66 as far as I can tell.
+
+16. How many HTTP GET request messages did your browser send? To which Internet addresses were
+these GET requests sent?
+
+	3. All sent to the same address. 128.119.245.12
+
+17. Can you tell whether your browser downloaded the two images serially, or whether they were downloaded
+from the two web sites in parallel? Explain.
+
+	It looks like they were downlaoded serially -- one after another.
+	The Request and Response code appear as packets 330 and 334 for the first img
+	for the second image, both request and response are after the first image is processed (packets 338 and 419)
+

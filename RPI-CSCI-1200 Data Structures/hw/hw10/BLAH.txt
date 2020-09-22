@@ -1,0 +1,26 @@
+2 Bug(s):         boundless expedient
+2 Buneary(s):     healing musical
+1 Charizard(s):   attentive
+3 Charmander(s):  attentive fine inappropriate
+2 Charmeleon(s):  attentive fine
+6 Dragon(s):      attentive bad dextrous fine inappropriate troubled
+2 Field(s):       healing musical
+2 Grovyle(s):     bad troubled
+2 HumanLike(s):   healing musical
+1 Lopunny(s):     healing
+6 Monster(s):     attentive bad dextrous fine inappropriate troubled
+1 Pinsir(s):      expedient
+10 Pokemon(s):     attentive bad boundless dextrous expedient fine healing inappropriate musical troubled
+1 Sceptile(s):    troubled
+1 Scyther(s):     boundless
+3 Treecko(s):     bad dextrous troubled
+inappropriate can breed with:  fine attentive dextrous bad troubled
+fine can breed with:  inappropriate attentive dextrous bad troubled
+attentive can breed with:  inappropriate fine dextrous bad troubled
+boundless can breed with:  expedient
+expedient can breed with:  boundless
+dextrous can breed with:  inappropriate fine attentive bad troubled
+bad can breed with:  inappropriate fine attentive dextrous troubled
+troubled can breed with:  inappropriate fine attentive dextrous bad
+musical can breed with:  healing
+healing can breed with:  musical

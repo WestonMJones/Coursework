@@ -1,0 +1,55 @@
+SOLUTIONS FOR LECTURE 11 PRACTICE PROBLEMS
+------------------------------------------
+
+For R(A,B,C,D):
+
+F = { A -> B ; B -> A ; B,C -> D }
+
+1. Find as many superkeys of R as you can.
+
+---
+
+Superkeys:
+
+AC, BC, ABC, ACD, BCD, ABCD
+
+For each of these sets, the closure is ABCD.
+
+---
+
+2. Out of those superkeys, which ones are candidate keys?
+
+---
+
+Candidate keys:
+
+AC, BC
+
+For each of these sets, the set is a superkey but 
+no proper subset of it is a superkey.
+
+---
+
+3. Which attributes are prime attributes?
+
+---
+
+A, B, C
+
+These attributes are part of some candidate key.
+
+---
+
+4. Is R in BCNF?
+(That is, does every functional dependency have a
+superkey as its determinant?)
+
+---
+
+No. 
+
+The determinants of A->B and B->A are not superkeys in R,
+so R is not in BCNF.
+
+---
+

@@ -1,0 +1,26 @@
+  2 Bug(s):         Pinsir Scyther
+  2 Buneary(s):     Buneary Lopunny
+  1 Charizard(s):   Charizard
+  3 Charmander(s):  Charizard Charmander Charmeleon
+  2 Charmeleon(s):  Charizard Charmeleon
+  6 Dragon(s):      Charizard Charmander Charmeleon Grovyle Sceptile Treecko
+  2 Field(s):       Buneary Lopunny
+  2 Grovyle(s):     Grovyle Sceptile
+  2 HumanLike(s):   Buneary Lopunny
+  1 Lopunny(s):     Lopunny
+  6 Monster(s):     Charizard Charmander Charmeleon Grovyle Sceptile Treecko
+  1 Pinsir(s):      Pinsir
+ 10 Pokemon(s):     Buneary Charizard Charmander Charmeleon Grovyle Lopunny Pinsir Sceptile Scyther Treecko
+  1 Sceptile(s):    Sceptile
+  1 Scyther(s):     Scyther
+  3 Treecko(s):     Grovyle Sceptile Treecko
+Charmander can breed with:  Charmeleon Charizard Treecko Grovyle Sceptile
+Charmeleon can breed with:  Charmander Charizard Treecko Grovyle Sceptile
+Charizard can breed with:  Charmander Charmeleon Treecko Grovyle Sceptile
+Scyther can breed with:  Pinsir
+Pinsir can breed with:  Scyther
+Treecko can breed with:  Charmander Charmeleon Charizard Grovyle Sceptile
+Grovyle can breed with:  Charmander Charmeleon Charizard Treecko Sceptile
+Sceptile can breed with:  Charmander Charmeleon Charizard Treecko Grovyle
+Buneary can breed with:  Lopunny
+Lopunny can breed with:  Buneary

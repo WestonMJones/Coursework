@@ -1,0 +1,72 @@
+Table LEASE dropped.
+
+
+Table BUILDING dropped.
+
+
+Table TENANT dropped.
+
+
+Table BUILDING created.
+
+
+Table TENANT created.
+
+
+Table LEASE created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+BID ADDRESS                        CITY                
+--- ------------------------------ --------------------
+123 1800 W. Michigan Ave.          Chicago             
+456 1567 N. State St..             Chicago             
+789 1432 W. 3rd St.                Evanston            
+
+
+BUI TENA       UNIT       RENT LEASEDATE
+--- ---- ---------- ---------- ---------
+123 A135       1234    9999.99 16-SEP-97
+456 B246       2468          0 23-DEC-11
+789 C357       3690        525 10-MAR-07
+123 B246       5432       1250 06-MAR-98
+456 C357       6789    5678.23 16-SEP-20
+
+
+TID  NAME                           PHONE     
+---- ------------------------------ ----------
+A135 Weston Jones                   1234567890
+B246 John Doe                       1234567899
+C357 John Doe                       1123456789

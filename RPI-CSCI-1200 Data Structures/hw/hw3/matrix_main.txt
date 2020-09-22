@@ -1,0 +1,35 @@
+// =======================================================
+//
+// IMPORTANT NOTE: Do not modify this file
+//     (except to uncomment the provided test cases 
+//     and add your test cases where specified)
+//
+// =======================================================
+
+
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <cassert>
+#include "Matrix.h"
+
+int main(){
+	Matrix m1(2,3,0);
+	m1.set(0,1,1);
+	m1.set(0,2,2);
+	m1.set(1,0,5);
+	m1.set(1,1,6);
+	m1.set(1,2,7);
+	
+	m1.print();
+
+	double*a = m1.get_row(1);
+	for (double *i=a;i<=a+m1.num_rows();i++) {
+		std::cout << *i << std::endl;
+	}
+
+
+
+}
+
+

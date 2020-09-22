@@ -1,0 +1,175 @@
+--Weston Jones -- Homework 2 -- CSC 352 Database Programming -- Section 901
+SET SERVEROUTPUT ON
+
+--Question 1
+<< out_blockone >> -- usually block name is optional
+DECLARE
+ n_outerblock NUMBER(6) := 100;
+BEGIN
+ DBMS_OUTPUT.PUT_LINE ('Printout from outer block, n_outerblock is '||
+ n_outerblock || '.');
+
+ DBMS_OUTPUT.PUT_LINE ('End of outer block - - - - - - ');
+
+-- below is a subunit, or called inner block, enclosed block, child block
+ DECLARE
+ n_innerblock NUMBER(6) := 99;
+ n_outerblock NUMBER(6) := 88;
+-- same name, over-write the global variable
+ BEGIN
+ DBMS_OUTPUT.PUT_LINE
+ ('Printout from inner block, n_innerrblock is ' ||
+ n_innerblock || '.');
+
+ DBMS_OUTPUT.PUT_LINE
+ ('Printout from inner block, n_outerblock defined in inner block is '||
+ n_outerblock || '.');
+ DBMS_OUTPUT.PUT_LINE
+ ('Printout from inner block, n_outerblock in outer block is ');
+ -- Add your statement here
+ DBMS_OUTPUT.PUT_LINE(out_blockone.n_outerblock);
+
+ END;
+END out_blockone; 
+
+--Question 2
+DECLARE
+  dept_id DEPARTMENTS.DEPARTMENT_ID%TYPE := 299;
+  dept_name DEPARTMENTS.DEPARTMENT_NAME%TYPE := 'Future';
+  man_id DEPARTMENTS.MANAGER_ID%TYPE := 145;
+  loc_id DEPARTMENTS.LOCATION_ID%TYPE := 1700;
+
+BEGIN
+  INSERT INTO DEPARTMENTS VALUES (dept_id,dept_name,man_id,loc_id);
+  commit;
+
+  DBMS_OUTPUT.put_line('New record with department ID = ' ||dept_id|| ', department name = ' ||dept_name||
+  ', manager id = '|| man_id || ', location id = ' || loc_id || '.');
+END;
+
+--Question 3
+DECLARE
+    dept_id DEPARTMENTS.DEPARTMENT_ID%TYPE := 299;
+    dept_name DEPARTMENTS.DEPARTMENT_NAME%TYPE;
+    man_id DEPARTMENTS.MANAGER_ID%TYPE;
+BEGIN
+    DELETE FROM DEPARTMENTS
+    WHERE DEPARTMENT_ID = dept_id
+    RETURNING DEPARTMENT_NAME, MANAGER_ID
+    INTO dept_name, man_id;
+    commit;
+
+DBMS_OUTPUT.put_line('Record deleted had department ID = ' ||dept_id|| ', department name = ' ||dept_name||
+    ', and manager id = '|| man_id || '.');
+END;
+
+--Question 4
+DECLARE
+    emp_id EMPLOYEES.EMPLOYEE_ID%TYPE;
+    l_name EMPLOYEES.LAST_NAME%TYPE;
+    n_emps NUMBER(6);
+BEGIN
+    SELECT count(EMPLOYEE_ID) into n_emps
+    FROM EMPLOYEES
+    WHERE DEPARTMENT_ID IS NULL;
+    
+    if n_emps != 1 THEN
+        DBMS_OUTPUT.put_line('There are either zero or more than one employees not assigned to a department!');
+    else
+        SELECT EMPLOYEE_ID, LAST_NAME into emp_id, l_name
+        FROM EMPLOYEES
+        WHERE DEPARTMENT_ID is NULL;
+        
+        UPDATE EMPLOYEES
+        SET DEPARTMENT_ID = 60
+        WHERE EMPLOYEE_ID = emp_id;
+        DBMS_OUTPUT.put_line('Updated employee #' ||emp_id|| '. ' || l_name || ' to department 60.');
+    end if;
+END;
+
+--Question 5
+SET SERVEROUTPUT ON
+DECLARE
+    avg_sal NUMBER(8);
+BEGIN
+    SELECT avg(SALARY) into avg_sal
+    FROM EMPLOYEES
+    WHERE DEPARTMENT_ID = 50;
+    
+    DBMS_OUTPUT.put_line(avg_sal);
+
+    CASE
+        WHEN avg_sal > 3500 THEN DBMS_OUTPUT.put_line('high');
+        WHEN avg_sal <= 3500 AND avg_sal >= 2500 THEN DBMS_OUTPUT.put_line('ok');
+        WHEN avg_sal <2500 THEN DBMS_OUTPUT.put_line('low');
+    END CASE;
+END;
+
+--Question 6
+DECLARE
+    emp_id EMPLOYEES.EMPLOYEE_ID%TYPE :=114;
+    emp_date EMPLOYEES.HIRE_DATE%TYPE;
+    emp_sal employees.salary%TYPE;
+    emp_years NUMBER(6);
+    bonus employees.salary%TYPE := 500;
+BEGIN
+    SELECT HIRE_DATE, SALARY 
+    INTO emp_date, emp_sal
+    FROM EMPLOYEES
+    WHERE EMPLOYEE_ID = emp_id;
+    
+    emp_years := floor (months_between (sysdate, emp_date)/12);
+    
+    if emp_years >= 24 THEN
+        bonus := bonus + 240;
+    end if;
+    
+    CASE
+        WHEN emp_sal > 10000 THEN bonus := bonus + 200;
+        WHEN emp_sal <= 10000 AND emp_sal >= 6000 THEN bonus := bonus + 400;
+        WHEN emp_sal < 6000 THEN bonus := bonus + 800;
+    END CASE;
+    
+    DBMS_OUTPUT.put_line('Bonus for employee #' || emp_id || ' is ' ||bonus|| '.');
+    
+END;
+
+--Question 7
+--Basic Loop
+DECLARE
+ loop_var NUMBER(6) := 11;
+BEGIN
+    LOOP
+        DBMS_OUTPUT.put_line(loop_var);
+        loop_var := loop_var + 1;
+        
+        if loop_var > 13 THEN
+            exit;
+        end if;
+    
+    END LOOP;
+END;
+
+--For loop
+DECLARE
+ loop_var NUMBER(6) := 11;
+BEGIN
+    for loop_var in 11 .. 13 LOOP
+        DBMS_OUTPUT.put_line(loop_var);
+    end loop;
+END;
+
+--While loop
+DECLARE
+ loop_var NUMBER(6) := 11;
+BEGIN
+    while loop_var < 14 LOOP
+        DBMS_OUTPUT.put_line(loop_var);
+        loop_var := loop_var + 1;
+    end loop;
+    
+END;
+
+
+
+

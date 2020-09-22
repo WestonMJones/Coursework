@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+  <link href="resources/jquery-ui-1.11.1/jquery-ui.css" rel="stylesheet">
+	<title>Team 8 HW 2</title>
+</head>
+<h2 class="demoHeaders">Hexed</h2>
+
+<label for="redAm">R: </label>
+<label id="redAm">255</label>
+<div id="red"></div>
+
+
+<label for="blueAm">B: </label>
+<label id="blueAm">255</label>
+<div id="blue"></div>
+
+<label for="GreenAm">G: </label>
+<label id="GreenAm">255</label>
+<div id="green"></div>
+
+<label id="time"></label>
+<label id="endTime"></label>
+<br>
+<button id="submit">Submit</button> 
+
+<div id="guess" class="ui-widget-content ui-corner-all"></div>
+<div id="target" class="ui-widget-content ui-corner-all"></div>
+
+<script src="resources/jquery-ui-1.11.1/external/jquery/jquery.js"></script>
+<script src="resources/jquery-ui-1.11.1/jquery-ui.js"></script>
+<style>
+    #guess {
+	width: 120px;
+	height: 100px;
+	margin-left: 15px;
+	background-image: none;
+    }   
+    #time{
+        visibility: hidden;
+    }
+    #endTime{
+        visibility: hidden;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $("#guess").css("background-color", "rgb(" + 245 + "," + 200 + "," + 100 + ")");
+        $("#target").css("background-color", randomColor());
+        $("#time").html(Date.now);
+    });
+   
+    $( "#red" ).slider({
+        orientation: "horizontal",
+        range: "min",
+        max: 255,
+        value: 255,
+        slide: function(event, ui) {
+            $("#redAm").html("" + ui.value);
+            $redVal=$("#red").slider('option','value');
+            $blueVal=$("#blue").slider('option','value');
+            $greenVal=$("#green").slider('option','value');
+            $("#guess").css("background-color", "rgb(" + $redVal + "," + $greenVal + "," + $blueVal + ")");
+        }
+    });
+    $( "#blue" ).slider({
+        orientation: "horizontal",
+        range: "min",
+        max: 255,
+        value: 255,
+        slide: function(event, ui) {
+            $("#blueAm").html("" + ui.value);
+            $redVal=$("#red").slider('option','value');
+            $blueVal=$("#blue").slider('option','value');
+            $greenVal=$("#green").slider('option','value');
+            $("#guess").css("background-color", "rgb(" + $redVal + "," + $greenVal + "," + $blueVal + ")");
+        }
+    });
+    $( "#green" ).slider({
+        orientation: "horizontal",
+        range: "min",
+        max: 255,
+        value: 255,
+        slide: function(event, ui) {
+            $("#GreenAm").html("" + ui.value);
+            $redVal=$("#red").slider('option','value');
+            $blueVal=$("#blue").slider('option','value');
+            $greenVal=$("#green").slider('option','value');
+            $("#guess").css("background-color", "rgb(" + $redVal + "," + $greenVal + "," + $blueVal + ")");
+        }
+    });
+    $("#submit").click(function(){
+
+        //Calculates time taken for turn.
+        $("#endTime").html(Date.now);
+        $timeTakenMs= parseInt($("#endTime").html()) - parseInt($("#time").html());
+
+
+        console.log($timeTakenMs);
+    });
+</script>
+</html>

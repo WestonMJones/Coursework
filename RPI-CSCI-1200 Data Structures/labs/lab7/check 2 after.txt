@@ -1,0 +1,16 @@
+$ drmemory -brief -batch -- Ugh.exe
+~~Dr.M~~ Dr. Memory version 1.11.0
+~~Dr.M~~ Running "Ugh.exe"
+elements:  4 3 2 1 0
+elements:  4 3 2 1 0
+~~Dr.M~~
+~~Dr.M~~ NO ERRORS FOUND:
+~~Dr.M~~       0 unique,     0 total unaddressable access(es)
+~~Dr.M~~       0 unique,     0 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       0 unique,     0 total warning(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of leak(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-Ugh.exe.492.000\results.txt

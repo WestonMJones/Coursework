@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hexed Game</title>
+
+        <!-- jQuery Includes -->
+        <script src="resources/jquery-3.3.1.min.js"></script>
+        <link href="resources/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+        <script src="resources/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+        <script src="resources/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+        <!-- Main Components -->
+        <script type="text/javascript" src="hexed.js"></script>  
+        <link href="resources/hexed.css" rel="stylesheet">
+
+        <script type="text/javascript">
+            function playGame() {
+                $("#game").hexed();
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <div id="game">
+            <h1>Todo: Put textboxes that allow to specify turns and difficulty.</h1>
+            <h1>Also add some styling to make this landing page less ugly.</h1>
+            <input type="button" onclick="playGame()" value="Play!" />
+        </div>
+
+        
+        <!-- 
+        <div id="gameboard">
+            <h1>Hexed</h1>
+            <h2>Guess the Color!</h2>
+
+                
+            <div id="guess" class=swatch>
+                <h3>Guess:</h3>
+                <div class="container"></div>
+            </div>
+
+            <div id="target" class="swatch">
+                <h3>Target:</h3>
+                <div class="container"></div>
+            </div>
+
+
+            <h4 id="red-label">Red: 128</h4>
+            <div id="red"></div>
+
+            <h4 id="green-label">Green: 128</h4>
+            <div id="green"></div>
+
+            <h4 id="blue-label">Blue: 128</h4>
+            <div id="blue"></div>
+
+            <button id="calculate">Got it!</button>
+
+            <h5 id="total-score">Total Score: 0</h5>
+            <h5 id="last-score">Last Color\'s Score: 0 </h5>
+            <h5 id="turn">Turn Number: X of Y</h5>
+            <h5 id="difficulty">Difficulty: X</h5>
+
+        </div>  
+        -->
+       
+
+
+    </body>
+</html>

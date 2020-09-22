@@ -1,0 +1,96 @@
+~~Dr.M~~ Dr. Memory version 1.11.0
+~~Dr.M~~ Running "Ugh.exe library_small.txt input_moregroups.txt out_library.txt out_songgroup.txt out_print.txt"
+Successfully read in library.
+~~Dr.M~~
+~~Dr.M~~ Error #1: UNADDRESSABLE ACCESS: writing 4 byte(s)
+~~Dr.M~~ # 0 RemoveFromGroup               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/student_functions.cpp:212]
+~~Dr.M~~ # 1 main                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:191]
+~~Dr.M~~
+~~Dr.M~~ Error #2: LEAK 512 bytes
+~~Dr.M~~ # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+~~Dr.M~~ # 1 std::basic_filebuf<>::open               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/fstream.tcc:55]
+~~Dr.M~~ # 2 main                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:37]
+~~Dr.M~~
+~~Dr.M~~ Error #3: LEAK 512 bytes
+~~Dr.M~~ # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+~~Dr.M~~ # 1 std::basic_filebuf<>::open               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/fstream.tcc:55]
+~~Dr.M~~ # 2 main                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:43]
+~~Dr.M~~
+~~Dr.M~~ Error #4: LEAK 512 bytes
+~~Dr.M~~ # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+~~Dr.M~~ # 1 std::basic_filebuf<>::open               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/fstream.tcc:55]
+~~Dr.M~~ # 2 main                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:49]
+~~Dr.M~~
+~~Dr.M~~ Error #5: LEAK 88 direct bytes + 293 indirect bytes
+~~Dr.M~~ # 0 replace_operator_new               [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 ReadLibraryFromFile                [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:337]
+~~Dr.M~~ # 2 main                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:55]
+~~Dr.M~~
+~~Dr.M~~ Error #6: LEAK 512 bytes
+~~Dr.M~~ # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+~~Dr.M~~ # 1 std::basic_filebuf<>::open               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/fstream.tcc:55]
+~~Dr.M~~ # 2 main                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:63]
+~~Dr.M~~
+~~Dr.M~~ Error #7: LEAK 8 direct bytes + 8 indirect bytes
+~~Dr.M~~ # 0 replace_operator_new               [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 MakeGroup                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/student_functions.cpp:92]
+~~Dr.M~~ # 2 main                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:122]
+~~Dr.M~~
+~~Dr.M~~ Error #8: LEAK 31 bytes
+~~Dr.M~~ # 0 replace_operator_new                                  [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 std::__cxx11::basic_string<>::_M_create               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 std::__cxx11::basic_string<>::_M_mutate               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.tcc:321]
+~~Dr.M~~ # 3 __tmainCRTStartup                                     [/usr/src/debug/mingw64-i686-runtime-5.0.1-1/crt/crtexe.c:334]
+~~Dr.M~~ # 4 KERNEL32.dll!BaseThreadInitThunk                     +0x23     (0x764162c4 <KERNEL32.dll+0x162c4>)
+~~Dr.M~~
+~~Dr.M~~ Error #9: LEAK 31 bytes
+~~Dr.M~~ # 0 replace_operator_new                                  [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 std::__cxx11::basic_string<>::_M_create               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 std::__cxx11::basic_string<>::_M_mutate               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.tcc:321]
+~~Dr.M~~ # 3 ReadSongFromInput                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:359]
+~~Dr.M~~ # 4 main                                                  [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:157]
+~~Dr.M~~
+~~Dr.M~~ Error #10: LEAK 31 bytes
+~~Dr.M~~ # 0 replace_operator_new                                  [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 std::__cxx11::basic_string<>::_M_create               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 std::__cxx11::basic_string<>::_M_assign               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.tcc:269]
+~~Dr.M~~ # 3 std::__cxx11::basic_string<>::operator=               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.h:1095]
+~~Dr.M~~ # 4 ReadSongFromInput                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:360]
+~~Dr.M~~ # 5 main                                                  [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:157]
+~~Dr.M~~
+~~Dr.M~~ Error #11: LEAK 31 bytes
+~~Dr.M~~ # 0 replace_operator_new                                  [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 std::__cxx11::basic_string<>::_M_create               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 std::__cxx11::basic_string<>::_M_mutate               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.tcc:321]
+~~Dr.M~~ # 3 std::__cxx11::basic_string<>::_M_append               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.tcc:374]
+~~Dr.M~~ # 4 std::getline<>                                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.h:5214]
+~~Dr.M~~ # 5 main                                                  [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:157]
+~~Dr.M~~
+~~Dr.M~~ Error #12: LEAK 38 bytes
+~~Dr.M~~ # 0 replace_operator_new                                  [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 std::__cxx11::basic_string<>::_M_create               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 std::__cxx11::basic_string<>::_M_mutate               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.tcc:321]
+~~Dr.M~~ # 3 std::__cxx11::basic_string<>::_M_append               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.tcc:374]
+~~Dr.M~~ # 4 std::getline<>                                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.h:5214]
+~~Dr.M~~ # 5 main                                                  [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:157]
+~~Dr.M~~
+~~Dr.M~~ Error #13: LEAK 38 bytes
+~~Dr.M~~ # 0 replace_operator_new                                  [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 std::__cxx11::basic_string<>::_M_create               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 std::__cxx11::basic_string<>::_M_assign               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.tcc:269]
+~~Dr.M~~ # 3 std::__cxx11::basic_string<>::operator=               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/basic_string.h:1095]
+~~Dr.M~~ # 4 ReadSongFromInput                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:360]
+~~Dr.M~~ # 5 main                                                  [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw5/main.cpp:157]
+~~Dr.M~~
+~~Dr.M~~ ERRORS FOUND:
+~~Dr.M~~       1 unique,     1 total unaddressable access(es)
+~~Dr.M~~       0 unique,     0 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       0 unique,     0 total warning(s)
+~~Dr.M~~      12 unique,    13 total,   2676 byte(s) of leak(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-Ugh.exe.14616.000\results.txt
+~~Dr.M~~ WARNING: application exited with abnormal code 0xc0000005
+Segmentation fault

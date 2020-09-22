@@ -1,0 +1,61 @@
+
+
+
+/*Make sure that song title is in small-caps*/
+h1 {
+	font-variant: small-caps;
+}
+
+/*the artist is in bold and in a 20 percent larger font*/
+.artist {
+	font-weight: bold;
+	font-size: 120%;
+}
+
+/*the album is italicized*/
+.album {
+	font-style: italic;
+}
+
+/*the release date and genres are in a proportionally reduced font size*/
+.date {
+	font-size: smaller;
+}
+
+/*and that the genres appear as a list with dashes.*/
+
+ul.genre {
+	font-size: smaller;
+    list-style: none;
+}
+
+ul.genre > li::before { /*selects the element right before the beginning of a new list entry */
+    content: "-";  /*alters the content of the before element to be a dash.*/
+}
+
+/*The album cover should appear to the right of each listing,*/
+img {
+	width:200px;
+	height:200px;
+	margin-left: 350px;
+}
+
+/*and the title of your favorite song should appear in green*/
+#fav {
+	color: green;
+}
+
+/*There should be a border around your list as well*/
+body {
+	padding: 10px;
+	border-width: 10px;
+	border-style: dotted;
+}
+
+/*as well as an entry centered at the bottom indicating the end of the list, in a
+smaller, italicised font. */
+h2 {
+	text-align: center;
+	font-size: smaller;
+	font-style: italic;
+}

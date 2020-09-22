@@ -1,0 +1,131 @@
+LECTURE 13 PRACTICE PROBLEM SOLUTIONS
+-------------------------------------
+
+Consider R(a,b,c,d,e) with F = { a->b,c,d ; b->c,d ; d,e->a }.
+
+The candidate keys of R are (d,e), (a,e), (b,e), so R is in neither BCNF nor 3NF.
+
+1. Find a minimal basis for F. (The result should contain four functional dependencies...)
+
+-----
+
+First, simplify the right hand sides:
+
+a->b
+a->c
+a->d
+b->c
+b->d
+d,e->a
+
+Second, try to simplify the left hand sides:
+
+a->b
+a->c
+a->d
+b->c
+b->d
+d,e->a (Can't be replaced with either d->a or e->a, must stay as is...)
+
+Third, remove any redundant functional dependencies:
+
+a->b
+a->c (can be removed, since a->b and b->c)
+a->d (can be removed, since a->b and b->d)
+b->c
+b->d
+d,e->a
+
+Final result for minimal basis:
+
+a->b
+b->c
+b->d
+d,e->a
+
+-----
+
+2. Use the minimal basis to find a decomposition of R into relations in 3NF.
+
+-----
+
+Create three relations from the minimal basis:
+
+R1(a,b)
+R2(b,c,d)
+R3(d,e,a)
+
+Does any relation contain a candidate key? Yes, R3 contains {d,e} and {a,e},
+so we do not have to add any other relations.
+
+Are any relations redundant? No, so we do not have to remove any relations.
+
+Final result for decomposition:
+
+R1(a,b)
+R2(b,c,d)
+R3(d,e,a)
+
+-----
+
+3. Show that your decomposition has the dependency preservation property.
+
+-----
+
+Projection on R1: a->b
+
+Projection on R2: b->c,d
+
+Projection on R3: d,e->a ; a->d 
+(We need to include a->d to be complete. Notice that R3 is in 3NF, 
+but not BCNF.)
+
+Can we derive everything in F from the projections?
+
+a->b,c,d? Yes, can derive from a->b and b->c,d
+
+b->c,d? Yes, in projection on R2
+
+d,e->a? Yes, in projection on R3
+
+We can derive everything in F, so the decomposition has the 
+dependency preservation property.
+
+-----
+
+4. Show that your decomposition has the lossless join property.
+
+-----
+
+We relabel the attributes a,b,c,d,e as A1, A2, A3, A4, A5
+
+Initial matrix given R1, R2, R3:
+
+a1	a2	b13	b14	b15
+b21	a2	a3	a4	b25
+a1	b32	b33	a4	a5
+
+Apply A1->A2, A3, A4 (first and third rows share common value for A1).
+
+a1	a2	b33	a4	b15
+b21	a2	a3	a4	b25
+a1	a2	b33	a4	a5
+
+Apply A2->A3,A4 (all three rows share common value for A2).
+
+a1	a2	a3	a4	b15
+b21	a2	a3	a4	b25
+a1	a2	a3	a4	a5
+
+Can't apply A4,A5->A1 (no rows share common values for both A4 and A5).
+
+No further changes are possible, so final matrix is:
+
+a1	a2	a3	a4	b15
+b21	a2	a3	a4	b25
+a1	a2	a3	a4	a5
+
+In the final matrix, there is a row of all aj's, so the decomposition
+has the lossless join property.
+
+-----

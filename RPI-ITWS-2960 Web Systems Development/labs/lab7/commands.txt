@@ -1,0 +1,118 @@
+// Creating the courses table
+CREATE TABLE `websyslab7`.`courses` ( `crn` INT(11) NOT NULL , `prefix` VARCHAR(4) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL , `number` SMALLINT(4) NOT NULL , `title` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL , PRIMARY KEY (`crn`)) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_unicode_ci;
+
+// Creating the students table
+CREATE TABLE `websyslab7`.`students` ( `RIN` INT(9) NOT NULL , `rcsID` VARCHAR(7) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL , `first_name` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL , `last_name` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL , `alias` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL , `phone` INT(10) NULL , PRIMARY KEY (`RIN`)) ENGINE = InnoDB;
+
+// Adding address fields
+ALTER TABLE `students` ADD `street` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL AFTER `phone`, ADD `city` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL AFTER `street`, ADD `state` VARCHAR(100) CHARACTER SET utf32 COLLATE utf8_unicode_ci NOT NULL AFTER `city`, ADD `zip` INT(6) NOT NULL AFTER `state`;
+
+// Adding year and section number to courses
+ALTER TABLE `courses` ADD `section` INT(2) NOT NULL AFTER `title`, ADD `year` INT(4) NOT NULL AFTER `section`;
+
+// Creating grades table
+CREATE TABLE `websyslab7`.`grades` ( `id` INT NOT NULL AUTO_INCREMENT , `crn` INT NULL , `rin` INT NULL , `grade` INT(3) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+// Foreign key bizness
+ALTER TABLE `grades` ADD INDEX(`crn`);
+
+ALTER TABLE `grades` ADD INDEX(`rin`);
+
+ALTER TABLE `grades` ADD FOREIGN KEY (`crn`) REFERENCES `courses`(`crn`) ON DELETE RESTRICT ON UPDATE RESTRICT; ALTER TABLE `grades` ADD FOREIGN KEY (`rin`) REFERENCES `students`(`RIN`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE `courses` ADD FOREIGN KEY (`crn`) REFERENCES `grades`(`crn`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE `students` ADD FOREIGN KEY (`RIN`) REFERENCES `grades`(`rin`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+// Inserting Values in coures table
+INSERT INTO `courses` (`crn`, `prefix`, `number`, `title`, `section`, `year`) VALUES ('12345', 'CSCI', '1001', 'Intro to Programming', '1', '2018'), ('22345', 'MATH', '1001', 'Calculus I', '1', '2018'), ('32345', 'PHYS', '1001', 'Physics I', '1', '2018'), ('42345', 'ECON', '1001', 'Intro to Econ', '1', '2018')
+
+// Inserting values in students table
+INSERT INTO `students` (`RIN`, `rcsID`, `first_name`, `last_name`, `alias`, `phone`, `street`, `city`, `state`, `zip`) VALUES ('661622111', 'jonesw', 'Weston', 'Jones', 'Wes', '1129258176', '1836 W Farwell', 'Chicago', 'IL', '60626'), ('661622222', 'burton', 'Robbie', 'Burton', 'Rob', '1234567890', '465 Rockwell Ave', 'Detroit', 'Michigan', '12345'), ('661622333', 'ferrisb', 'Kieran', 'Ferris', 'Kier', '987654321', 'Shady Oaks Rd', 'Newcastle', 'Iowa', '34512'), ('661622444', 'selbyt', 'Thomas', 'Selby', 'Tom', '431234234', 'Kennedy Ave', 'San Francisco', 'California', '12185')
+
+// Insertin values
+INSERT INTO `grades` (`id`, `crn`, `rin`, `grade`) VALUES ('1', '12345', '661622222', '50'), ('2', '12345', '661622222', '55'), ('3', '42345', '661622333', '60'), ('4', '42345', '661622333', '65'), ('5', '22345', '661622111', '70'), ('6', '22345', '661622111', '75'), ('7', '32345', '661622444', '80'), ('8', '32345', '661622444', '85'), ('9', '22345', '661622333', '90'), ('10', '32345', '661622222', '95')
+
+#7 list all students in the following sequences; in alphabetical order by rin, 
+
+	SELECT * FROM `students` ORDER BY `RIN` ASC 
+
+	yields:
+	RIN	rcsID	first_name	last_name	alias	phone	street	city	state	zip
+661622111	jonesw	Weston	Jones	Wes	1129258176	1836 W Farwell	Chicago	IL	60626
+661622222	burton	Robbie	Burton	Rob	1234567890	465 Rockwell Ave	Detroit	Michigan	12345
+661622333	ferrisb	Kieran	Ferris	Kier	987654321	Shady Oaks Rd	Newcastle	Iowa	34512
+661622444	selbyt	Thomas	Selby	Tom	431234234	Kennedy Ave	San Francisco	California	12185
+
+
+last name,
+
+	SELECT * FROM `students` ORDER BY `last_name` ASC
+
+	yields:
+	RIN	rcsID	first_name	last_name	alias	phone	street	city	state	zip
+661622222	burton	Robbie	Burton	Rob	1234567890	465 Rockwell Ave	Detroit	Michigan	12345
+661622333	ferrisb	Kieran	Ferris	Kier	987654321	Shady Oaks Rd	Newcastle	Iowa	34512
+661622111	jonesw	Weston	Jones	Wes	1129258176	1836 W Farwell	Chicago	IL	60626
+661622444	selbyt	Thomas	Selby	Tom	431234234	Kennedy Ave	San Francisco	California	12185
+
+
+RCSid, 
+
+	SELECT * FROM `students` ORDER BY `rcsID` ASC
+
+	yields:
+	RIN	rcsID	first_name	last_name	alias	phone	street	city	state	zip
+661622222	burton	Robbie	Burton	Rob	1234567890	465 Rockwell Ave	Detroit	Michigan	12345
+661622333	ferrisb	Kieran	Ferris	Kier	987654321	Shady Oaks Rd	Newcastle	Iowa	34512
+661622111	jonesw	Weston	Jones	Wes	1129258176	1836 W Farwell	Chicago	IL	60626
+661622444	selbyt	Thomas	Selby	Tom	431234234	Kennedy Ave	San Francisco	California	12185
+
+
+and firstname
+
+SELECT * FROM `students` ORDER BY `first_name` ASC
+
+	yields:
+	RIN	rcsID	first_name	last_name	alias	phone	street	city	state	zip
+661622333	ferrisb	Kieran	Ferris	Kier	987654321	Shady Oaks Rd	Newcastle	Iowa	34512
+661622222	burton	Robbie	Burton	Rob	1234567890	465 Rockwell Ave	Detroit	Michigan	12345
+661622444	selbyt	Thomas	Selby	Tom	431234234	Kennedy Ave	San Francisco	California	12185
+661622111	jonesw	Weston	Jones	Wes	1129258176	1836 W Farwell	Chicago	IL	60626
+
+
+#8 list all students rin, name and address if their grade in any course was higher than
+a 90
+
+	SELECT students.RIN, students.first_name, students.last_name, students.street, students.city, students.state, students.zip FROM students JOIN grades WHERE grades.grade > 90 and students.RIN=grades.rin
+
+	yields:
+
+	rin   first_name   last_name   street   city   state   zip
+661622222  Robbie       Burton 465 Rockwell Ave  Detroit Michigan 12345
+
+
+#9 List average grade in each course.
+
+	SELECT courses.title, AVG(grades.grade) FROM courses INNER JOIN grades ON courses.crn = grades.crn GROUP BY courses.title
+
+	Yields:
+
+	title                AVG(grades.grade)
+	Calculus I              78.3333
+Intro to Econ              62.5000
+Intro to Programming      52.5000
+Physics I                 86.6667
+
+
+#10 10. list out the number of students in each course
+
+	SELECT courses.title, COUNT(*) FROM courses INNER JOIN grades ON courses.crn = grades.crn GROUP BY courses.title
+
+	yields:
+
+	title	COUNT(*)	
+	Calculus I	3	
+	Intro to Econ	2	
+	Intro to Programming	2	
+	Physics I	3	

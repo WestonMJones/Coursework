@@ -1,0 +1,23 @@
+$ drmemory -brief -batch -- Ugh.exe
+~~Dr.M~~ Dr. Memory version 1.11.0
+~~Dr.M~~ Running "Ugh.exe"
+a.size() = 10 --- should be 10
+a.front() = 0 --- should be 0.0
+a.back() = 3 --- should be 3.0
+Elements =  0 1 1.41421 1.73205 2 2.23607 2.44949 2.64575 2.82843 3
+~~Dr.M~~
+~~Dr.M~~ Error #1: LEAK 16 direct bytes + 144 indirect bytes
+~~Dr.M~~ # 0 replace_operator_new               [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 dslist<>::push_back                [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/labs/lab7/dslist.h:156]
+~~Dr.M~~ # 2 main                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/labs/lab7/lab7.cpp:15]
+~~Dr.M~~
+~~Dr.M~~ ERRORS FOUND:
+~~Dr.M~~       0 unique,     0 total unaddressable access(es)
+~~Dr.M~~       0 unique,     0 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       0 unique,     0 total warning(s)
+~~Dr.M~~       1 unique,     1 total,    160 byte(s) of leak(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-Ugh.exe.11448.000\results.txt

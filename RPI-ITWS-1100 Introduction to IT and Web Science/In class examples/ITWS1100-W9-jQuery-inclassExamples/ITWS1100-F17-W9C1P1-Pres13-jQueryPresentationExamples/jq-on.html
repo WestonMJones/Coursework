@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Web Systems jQuery and jQuery UI Examples</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var jq = jQuery.noConflict();
+	jq(document).ready(function(){
+		/* Only the original p element will fire this alert */
+		jq("p").click(function() { 
+			alert("I am the original p element"); 
+		});
+		/* 
+		 * When the element with id 'addP' is clicked, 
+		 * <p>I am a new h3 element!</p> is added after
+		 * all h1 elements.
+		 *
+		 */
+		jq("#addP").click(function() {
+			jq("h1").after("<p>I am a new p element!</p>");
+		});
+		
+		/* 
+		 * When button with id '#bind' is clicks, fires the function which binds all
+		 * p elements with a click event that fires a alert.
+		 * 
+		 * If we wanted, could place the on() function in the beginning and then any
+		 * p element, the original or any new ones made, would have the click event
+		 * fired.
+		 */
+		jq("#bind").click(function() {
+			jq(document).on( "click", "p", function(event) { alert("Yay! I got binded to the element! w00t!") });
+		});
+		
+		/* Toggle the view of the code */
+		jq("button#toggleJQCode").click(function() {
+			jq("pre").slideToggle();
+		});
+	});
+</script>
+<style type="text/css">
+	body {
+		font-size:1.2em;	
+	}
+	button {
+		display:inline;
+		margin-bottom:10px;
+		cursor:pointer;
+	}
+	pre {
+		display:none;
+	}
+	#home {
+		float:right;
+		font-size:1.2em;
+		padding-right:20px;	
+	}
+</style>
+</head>
+<body>
+	<a href="examples.html" id="home">Home</a>
+	<h1>jQuery .on() Example</h1>
+    
+    <p id="incomplete">The original p element.</p>
+    <button id="addP">Add a p element</button>
+    <button id="bind">How to bind dynamically added elements</button>
+    <button id="toggleJQCode">Toggle Code</button>
+    <pre>
+    	<code>
+        	var jq = jQuery.noConflict();
+            jq(document).ready(function(){
+                jq("p").click(function() { 
+                    alert("I am the original p element"); 
+                });
+                
+                jq("#addP").click(function() {
+                    jq("h1").after("<p>I am a new p element!</p>");
+                });
+               
+                jq("#appendText").click(function() {
+                    jq("#incomplete").append("sentence.");
+                });
+               
+               jq("#appendNewP").click(function() {
+                    jq("#new").append("<p>I am a new p element!</p>");
+                });
+               
+                jq("#bind").click(function() {
+                    jq(document).on( "click", "p", function(event) { 
+                    	alert("Yay! I got binded to the element!"); 
+                    });
+                });
+                
+                /* Toggle the view of the code */
+                jq("button#toggleJQCode").click(function() {
+                    jq("pre").slideToggle();
+                });
+            });
+        </code>
+	</pre>
+</body>
+</html>

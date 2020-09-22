@@ -1,0 +1,207 @@
+Passenger C4TL was given seat 3A.
+Passenger WTQ1 requested an invalid seat 4E.
+Passenger WTQ1 was given seat 3B.
+Passenger 4ETN was given seat 5A.
+Passenger UV1L was given seat 5C.
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       .... !!!! .... .... !!!! .... .... F
+2       .... !!!! .... .... !!!! .... .... F
+3       C4TL WTQ1 !!!! .... !!!! .... .... B
+4       .... .... !!!! .... !!!! .... .... B
+5       4ETN .... UV1L !!!! .... .... .... C
+6       .... .... .... !!!! .... .... .... C
+7       .... .... .... !!!! .... .... .... C
+8       .... .... .... !!!! .... .... .... C
+9       .... .... .... !!!! .... .... .... C
+10      .... .... .... !!!! .... .... .... C
+Passenger 42OM was given seat 1D.
+Passenger QLK0 was given seat 5E.
+Passenger 69UB was given seat 5G.
+Passenger YWPR was given seat 6A.
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       .... !!!! .... 42OM !!!! .... .... F
+2       .... !!!! .... .... !!!! .... .... F
+3       C4TL WTQ1 !!!! .... !!!! .... .... B
+4       .... .... !!!! .... !!!! .... .... B
+5       4ETN .... UV1L !!!! QLK0 .... 69UB C
+6       YWPR .... .... !!!! .... .... .... C
+7       .... .... .... !!!! .... .... .... C
+8       .... .... .... !!!! .... .... .... C
+9       .... .... .... !!!! .... .... .... C
+10      .... .... .... !!!! .... .... .... C
+Passenger 3NN2 was given seat 2D.
+Passenger U8KP could not be found.
+Passenger IV8S was given seat 3D.
+Passenger 926A was given seat 6C.
+Passenger Q2DV was given seat 1A.
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       Q2DV !!!! .... 42OM !!!! .... .... F
+2       .... !!!! .... 3NN2 !!!! .... .... F
+3       C4TL WTQ1 !!!! IV8S !!!! .... .... B
+4       .... .... !!!! .... !!!! .... .... B
+5       4ETN .... UV1L !!!! QLK0 .... 69UB C
+6       YWPR .... .... !!!! .... .... .... C
+7       .... .... .... !!!! .... .... .... C
+8       .... .... .... !!!! .... .... .... C
+9       .... .... .... !!!! .... .... .... C
+10      .... .... .... !!!! .... .... .... C
+Passenger X8IE requested occupied seat 5A.
+Passenger X8IE was given seat 6C.
+Passenger EWW0 was given seat 1C.
+Passenger 70XQ was given seat 1F.
+Passenger 4F11 was given seat 3F.
+Passenger AA0E was given seat 6E.
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       Q2DV !!!! EWW0 42OM !!!! 70XQ .... F
+2       .... !!!! .... 3NN2 !!!! .... .... F
+3       C4TL WTQ1 !!!! IV8S !!!! 4F11 .... B
+4       .... .... !!!! .... !!!! .... .... B
+5       4ETN .... UV1L !!!! QLK0 .... 69UB C
+6       YWPR .... X8IE !!!! AA0E .... .... C
+7       .... .... .... !!!! .... .... .... C
+8       .... .... .... !!!! .... .... .... C
+9       .... .... .... !!!! .... .... .... C
+10      .... .... .... !!!! .... .... .... C
+Passenger F42U was given seat 7G.
+Passenger 033L could not be found.
+Passenger 6NT7 requested an invalid seat 5D.
+Passenger 6NT7 was given seat 6G.
+Passenger K2YZ was given seat 7A.
+Passenger RJUS was given seat 7C.
+Passenger 7RYL was given seat 7E.
+Passenger MK8Z was given seat 7G.
+Passenger B7MP requested occupied seat 6E.
+Passenger B7MP was given seat 8A.
+Passenger U2XS was given seat 8C.
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       Q2DV !!!! EWW0 42OM !!!! 70XQ .... F
+2       .... !!!! .... 3NN2 !!!! .... .... F
+3       C4TL WTQ1 !!!! IV8S !!!! 4F11 .... B
+4       .... .... !!!! .... !!!! .... .... B
+5       4ETN .... UV1L !!!! QLK0 .... 69UB C
+6       YWPR .... X8IE !!!! AA0E .... 6NT7 C
+7       K2YZ .... RJUS !!!! 7RYL .... MK8Z C
+8       B7MP .... U2XS !!!! .... .... .... C
+9       .... .... .... !!!! .... .... .... C
+10      .... .... .... !!!! .... .... .... C
+Passenger 8NG7 was given seat 10E.
+Passenger 5V4I was given seat 8E.
+Passenger RCV7 was given seat 8G.
+Passenger RY99 was given seat 9A.
+Passenger SKZQ was given seat 3G.
+Passenger 5G86 was given seat 9C.
+Passenger HPJR was given seat 9E.
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       Q2DV !!!! EWW0 42OM !!!! 70XQ .... F
+2       .... !!!! .... 3NN2 !!!! .... .... F
+3       C4TL WTQ1 !!!! IV8S !!!! 4F11 SKZQ B
+4       .... .... !!!! .... !!!! .... .... B
+5       4ETN .... UV1L !!!! QLK0 .... 69UB C
+6       YWPR .... X8IE !!!! AA0E .... 6NT7 C
+7       K2YZ .... RJUS !!!! 7RYL .... MK8Z C
+8       B7MP .... U2XS !!!! 5V4I .... RCV7 C
+9       RY99 .... 5G86 !!!! HPJR .... .... C
+10      .... .... .... !!!! 8NG7 .... .... C
+Passenger DKCN was given seat 9G.
+Passenger EZ5G was given seat 1G.
+Passenger O452 requested occupied seat 2D.
+Passenger O452 was given seat 2A.
+Passenger ICMS was given seat 4A.
+Passenger XJ2P was given seat 4B.
+Passenger TPPJ was given seat 10A.
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       Q2DV !!!! EWW0 42OM !!!! 70XQ EZ5G F
+2       O452 !!!! .... 3NN2 !!!! .... .... F
+3       C4TL WTQ1 !!!! IV8S !!!! 4F11 SKZQ B
+4       ICMS XJ2P !!!! .... !!!! .... .... B
+5       4ETN .... UV1L !!!! QLK0 .... 69UB C
+6       YWPR .... X8IE !!!! AA0E .... 6NT7 C
+7       K2YZ .... RJUS !!!! 7RYL .... MK8Z C
+8       B7MP .... U2XS !!!! 5V4I .... RCV7 C
+9       RY99 .... 5G86 !!!! HPJR .... DKCN C
+10      TPPJ .... .... !!!! 8NG7 .... .... C
+Passenger BL7G was given seat 4D.
+Passenger 9B74 was given seat 10C.
+Passenger EWY5 was given seat 4F.
+Passenger WIDO was given seat 10G.
+Passenger 0AAA was given seat 5B
+Passenger NVFD was given seat 5F
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       Q2DV !!!! EWW0 42OM !!!! 70XQ EZ5G F
+2       O452 !!!! .... 3NN2 !!!! .... .... F
+3       C4TL WTQ1 !!!! IV8S !!!! 4F11 SKZQ B
+4       ICMS XJ2P !!!! BL7G !!!! EWY5 .... B
+5       4ETN 0AAA UV1L !!!! QLK0 NVFD 69UB C
+6       YWPR .... X8IE !!!! AA0E .... 6NT7 C
+7       K2YZ .... RJUS !!!! 7RYL .... MK8Z C
+8       B7MP .... U2XS !!!! 5V4I .... RCV7 C
+9       RY99 .... 5G86 !!!! HPJR .... DKCN C
+10      TPPJ .... 9B74 !!!! 8NG7 .... WIDO C
+Passenger OT1E requested occupied seat 1A.
+Passenger OT1E was given seat 2C.
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       Q2DV !!!! EWW0 42OM !!!! 70XQ EZ5G F
+2       O452 !!!! OT1E 3NN2 !!!! .... .... F
+3       C4TL WTQ1 !!!! IV8S !!!! .... SKZQ B
+4       ICMS XJ2P !!!! BL7G !!!! EWY5 .... B
+5       4ETN 0AAA UV1L !!!! QLK0 NVFD 69UB C
+6       YWPR .... X8IE !!!! AA0E .... 6NT7 C
+7       K2YZ .... RJUS !!!! 7RYL .... MK8Z C
+8       B7MP .... U2XS !!!! 5V4I .... RCV7 C
+9       RY99 .... 5G86 !!!! HPJR .... DKCN C
+10      TPPJ .... 9B74 !!!! 8NG7 .... WIDO C
+Passenger YPZI was given seat 6B
+Passenger ICW5 was given seat 6F
+Passenger PVY9 was given seat 3F.
+Passenger 9KSP requested occupied seat 6B.
+Passenger 9KSP was given seat 7B
+Passenger IAJS was given seat 4D.
+Passenger 5R1C was given seat 7F
+Passenger PYT0 was given seat 4G.
+Could not find a seat in the B section for passenger RAXB.
+Passenger 6HYD was given seat 8B
+Passenger 8DBK was given seat 8F
+Passenger P1NS was given seat 9B
+Passenger C6V4 was given seat 9F
+Passenger P9GG was given seat 10B
+Passenger 9B5Y could not be found.
+Could not find a seat in the B section for passenger 7WY1.
+Passenger WZF9 was given seat 10F
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       Q2DV !!!! EWW0 42OM !!!! 70XQ EZ5G F
+2       O452 !!!! OT1E 3NN2 !!!! .... .... F
+3       C4TL WTQ1 !!!! IV8S !!!! PVY9 SKZQ B
+4       ICMS XJ2P !!!! IAJS !!!! EWY5 PYT0 B
+5       4ETN 0AAA UV1L !!!! QLK0 NVFD 69UB C
+6       YWPR YPZI X8IE !!!! AA0E ICW5 6NT7 C
+7       K2YZ 9KSP RJUS !!!! 7RYL 5R1C MK8Z C
+8       B7MP 6HYD U2XS !!!! 5V4I 8DBK RCV7 C
+9       RY99 P1NS 5G86 !!!! HPJR C6V4 DKCN C
+10      TPPJ P9GG 9B74 !!!! 8NG7 WZF9 WIDO C
+The following passengers are scheduled to be upgraded to first class:
+L1ES
+The following passengers are scheduled to be upgraded to business class:
+Passenger L1ES was given seat 2F.
+Passenger L1ES was upgraded to the first class section.
+Seating Chart for Flight 301
+         A    B    C    D    E    F    G    Seating Class
+1       Q2DV !!!! EWW0 42OM !!!! 70XQ EZ5G F
+2       O452 !!!! OT1E 3NN2 !!!! L1ES .... F
+3       C4TL WTQ1 !!!! IV8S !!!! PVY9 SKZQ B
+4       ICMS XJ2P !!!! IAJS !!!! EWY5 PYT0 B
+5       4ETN 0AAA UV1L !!!! QLK0 NVFD 69UB C
+6       YWPR YPZI X8IE !!!! AA0E ICW5 6NT7 C
+7       K2YZ 9KSP RJUS !!!! 7RYL 5R1C MK8Z C
+8       B7MP 6HYD U2XS !!!! 5V4I 8DBK RCV7 C
+9       RY99 P1NS 5G86 !!!! HPJR C6V4 DKCN C
+10      TPPJ P9GG 9B74 !!!! 8NG7 WZF9 WIDO C

@@ -1,0 +1,70 @@
+
+--Weston Jones -- Homework 1 -- CSC 352 Database Programming -- Section 901
+
+--Question 1
+SELECT EMP.ENAME, EMP.SAL, DEPT.DNAME FROM EMP INNER JOIN DEPT ON EMP.DEPTNO=dept.deptno WHERE COMM IS NULL AND SAL < 2000 
+
+--Question 2
+-- I interpretted this question such that only employees who work in dept 20 and whose managers also work in dept 20 will be retrieved.
+-- One can easily modify the last two AND statements to broaden the deptartment search criteria.   
+SELECT A.ENAME AS Employee, A.SAL AS EmployeeSalary, B.ENAME AS Manager, B.SAL AS ManagerSalary
+FROM EMP A, EMP B
+WHERE A.EMPNO <> B.EMPNO 
+AND A.MGR = B.EMPNO
+AND A.DEPTNO=20
+AND B.DEPTNO=20
+
+--Question 3
+SELECT DEPARTMENTS.DEPARTMENT_ID FROM EMPLOYEES
+LEFT OUTER JOIN DEPARTMENTS ON EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.DEPARTMENT_ID
+WHERE EMPLOYEES.DEPARTMENT_ID IS NOT NULL
+GROUP BY DEPARTMENTS.DEPARTMENT_ID, DEPARTMENTS.DEPARTMENT_NAME
+
+--Question 4
+SELECT DEPARTMENT_ID, DEPARTMENT_NAME
+FROM DEPARTMENTS
+WHERE DEPARTMENT_ID NOT IN (
+    SELECT DEPARTMENTS.DEPARTMENT_ID FROM EMPLOYEES
+    LEFT OUTER JOIN DEPARTMENTS ON EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.DEPARTMENT_ID
+    WHERE EMPLOYEES.DEPARTMENT_ID IS NOT NULL
+    GROUP BY DEPARTMENTS.DEPARTMENT_ID, DEPARTMENTS.DEPARTMENT_NAME
+)
+
+--Question 5
+SELECT A.LAST_NAME, A.FIRST_NAME, B.LAST_NAME AS Manager
+FROM EMPLOYEES A, EMPLOYEES B
+WHERE A.EMPLOYEE_ID <> B.EMPLOYEE_ID
+AND A.MANAGER_ID = B.EMPLOYEE_ID
+AND a.department_id IS NULL
+
+--Question 6
+SELECT DEPARTMENT_ID, MAX( (salary + salary * NVL (commission_PCT, 0) )) AS MaxSalary, 
+MIN( (salary + salary * NVL (commission_PCT, 0) )) AS MinSalary  FROM employees
+WHERE DEPARTMENT_ID IS NOT NULL
+GROUP BY DEPARTMENT_ID
+ORDER BY DEPARTMENT_ID
+
+--Question 7
+SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, DEPARTMENT_ID FROM EMPLOYEES
+where last_name in
+ (select last_name from employees
+ group by last_name
+ having count(*) > 1) 
+
+--Question 8
+SELECT COUNT(PHONE_NUMBER) AS NumberOFInterationalPhoneNumbers FROM EMPLOYEES
+WHERE PHONE_NUMBER LIKE '011%'
+
+--Question 9
+--Not totally sure what this question is asking, but I looked at the discussion thread on D2L for this question. 
+--The following code outputs a list of all the table names in my current workspace.
+SELECT * FROM tab
+
+--Question 10
+SET SERVEROUTPUT ON
+DECLARE
+  emp_name VARCHAR2( 15 );
+BEGIN
+    SELECT ename INTO emp_name from emp where empno = 7839;
+    DBMS_OUTPUT.put_line (emp_name);
+END;

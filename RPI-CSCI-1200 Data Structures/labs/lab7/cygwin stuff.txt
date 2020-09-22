@@ -1,0 +1,3 @@
+cd "C:\Users\crabs_000\Dropbox\School\DataStructures\labs\lab7"
+memg++ *.cpp -o Ugh.exe -Wall
+drmemory -brief -batch -- Ugh.exe

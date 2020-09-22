@@ -1,0 +1,27 @@
+{
+  "title": "WebSys_Course",
+  "lectures": {
+    "lecture 1": {
+      "title": "Course Schedule",
+      "desc": "Overview of the class",
+      "link": "https://lms.rpi.edu./bbcswebdav/pid-143106-dt-content-rid-4857833_1/xid-4857833_1"
+    },
+    "lecture 12": {
+      "title": "Authentication",
+      "desc": "Discussion of methods to prevent SQL Injections and salt passwords",
+      "link": "https://lms.rpi.edu./bbcswebdav/pid-143118-dt-content-rid-6643897_1/xid-6643897_1"
+    }
+  },
+  "labs": {
+    "lab 1": {
+      "title": "AMP Stack",
+      "desc": "Setting up the AMP Stack",
+      "link": "https://lms.rpi.edu./bbcswebdav/pid-143108-dt-content-rid-4905038_1/courses/1809_ITWS_2110_00/ITW2110-F18-W2-Lab1-AMPStack.html"
+    },
+    "lab 9": {
+      "title": "PHP and Authentication",
+      "desc": "Loads JSON data and implements a basic authentication protocol.",
+      "link": "https://lms.rpi.edu./bbcswebdav/pid-143118-dt-content-rid-6643898_1/courses/1809_ITWS_2110_00/Lab9_ITWS2110_Fall2018.pdf"
+    }
+  }
+}

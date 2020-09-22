@@ -1,0 +1,49 @@
+Part 1 Explanation:
+
+For each song, I was required to detail information regarding the artist,
+album, release date, etc. I figured lists would be best to display this.
+In addition, I nested each song and its correpsondng attributes within an individual div container as this would modularize the 
+markup more and make styling in the future easier. Lastly, I did a bit of inline CSS on the images just so that they would
+display better when viewing the webpage -- I understand that this is bad practice, it was just something I did to make viewing the page a bit more
+pleasent and let me more easily verify that everything was correct.
+
+Part 2 Explanation:
+
+I wrapped all the songs I had chosen in a "favorite songs" group. With that, I defined six <songs> each with a list of attibutes
+corresponding to the information I had previous obtained from part 1. 
+
+<track> -- to list which number of 6 the track is.
+<name> -- to list the name of the song
+<artist> -- to list the artist of the song
+<artist_website> -- to give the website of the artist
+<album> -- to name the album the song appears on
+<album_link> -- to give the link to the albums page on Allmusic.com
+<album_art> -- to give the URL to an image of the album cover
+<release> -- to give the year of album's release
+<genre> -- to list the genres of the song (acording to google)
+
+Part 3 Explanation:
+
+-For making the title of each song in small caps, I selected the <h1> tag and applied the font-varient
+property with the value small caps.
+
+-For making the artist bold and in a 20% larger font, I added the artist class to all the text in my html refering to an artist. Then
+I selected this class and applied font weight and made the font 120%.
+
+-For italizing the album, I added a album class to my html that encapsulated all the album names. I then used CSS to apply the italic font style.
+
+-To make the genre and release date font smaller, I added corresponding classes to the HTML and then used the CSS smaller property which makes a font
+smaller relative to the parent font size.
+
+-To make the genres a dashed list, I altered my html to convert the genres into a list instead of a single line. I used list-style no to get
+rid of the current leading character and then used a selector to alter the content of the "invisible" element right before every list entry into a dash.
+
+-To make my favorite song green, I used an ID as it was a single use selector.
+
+-To add a border, I styled the body of the document, adding padding so the border would be visible and making the border line thicker.
+
+-Lastly, the lab calls for a final "entry" to the list in the bottom. I wasn't totally sure what that meant, but so I added a final entry in the form
+of the words "end of list" and horiontally centered it.
+
+Part 4
+

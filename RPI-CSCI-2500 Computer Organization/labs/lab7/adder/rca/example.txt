@@ -1,0 +1,61 @@
+bash-3.2$ ./adder
+Enter the binary digit for d0[0]: 0
+Enter the binary digit for d0[1]: 0
+Enter the binary digit for d0[2]: 1
+Enter the binary digit for d0[3]: 1
+Enter the binary digit for d1[0]: 0
+Enter the binary digit for d1[1]: 0
+Enter the binary digit for d1[2]: 1
+Enter the binary digit for d1[3]: 1
+0011 + 0011 = 0110 without a carry
+bash-3.2$ ./adder
+Enter the binary digit for d0[0]: 1
+Enter the binary digit for d0[1]: 0
+Enter the binary digit for d0[2]: 1
+Enter the binary digit for d0[3]: 0
+Enter the binary digit for d1[0]: 1
+Enter the binary digit for d1[1]: 0
+Enter the binary digit for d1[2]: 1
+Enter the binary digit for d1[3]: 0
+1010 + 1010 = 0100 with a carry
+bash-3.2$ ./adder
+Enter the binary digit for d0[0]: 1
+Enter the binary digit for d0[1]: 1
+Enter the binary digit for d0[2]: 0
+Enter the binary digit for d0[3]: 1
+Enter the binary digit for d1[0]: 0
+Enter the binary digit for d1[1]: 0
+Enter the binary digit for d1[2]: 0
+Enter the binary digit for d1[3]: 1
+1101 + 0001 = 1110 without a carry
+bash-3.2$ ./adder
+Enter the binary digit for d0[0]: 0
+Enter the binary digit for d0[1]: 1
+Enter the binary digit for d0[2]: 0
+Enter the binary digit for d0[3]: 0
+Enter the binary digit for d1[0]: 0
+Enter the binary digit for d1[1]: 1
+Enter the binary digit for d1[2]: 0
+Enter the binary digit for d1[3]: 0
+0100 + 0100 = 1000 without a carry
+bash-3.2$ ./adder
+Enter the binary digit for d0[0]: 0
+Enter the binary digit for d0[1]: 1
+Enter the binary digit for d0[2]: 1
+Enter the binary digit for d0[3]: 1
+Enter the binary digit for d1[0]: 0
+Enter the binary digit for d1[1]: 1
+Enter the binary digit for d1[2]: 1
+Enter the binary digit for d1[3]: 1
+0111 + 0111 = 1110 without a carry
+bash-3.2$ ./adder
+Enter the binary digit for d0[0]: 1
+Enter the binary digit for d0[1]: 1
+Enter the binary digit for d0[2]: 1
+Enter the binary digit for d0[3]: 0
+Enter the binary digit for d1[0]: 1
+Enter the binary digit for d1[1]: 0
+Enter the binary digit for d1[2]: 1
+Enter the binary digit for d1[3]: 0
+1110 + 1010 = 1000 with a carry
+bash-3.2$ exit

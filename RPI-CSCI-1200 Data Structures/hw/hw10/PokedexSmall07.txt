@@ -1,0 +1,200 @@
+{
+	id : 4
+	label : Charmander
+	species : Lizard
+	types : [ Fire ]
+	abilities : [ 14 0 144 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Monster Dragon ]
+	hatchCounter : 20
+	height : 0.600000
+	weight : 8.500000
+	baseExpYield : 62
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 0 0 0 0 1 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Red
+	baseStats : [ 39 52 43 60 50 65 ]
+}
+{
+	id : 5
+	label : Charmeleon
+	species : Flame
+	types : [ Fire ]
+	abilities : [ 14 0 144 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Monster Dragon ]
+	hatchCounter : 20
+	height : 1.100000
+	weight : 19.000000
+	baseExpYield : 142
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 0 0 1 0 1 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Red
+	baseStats : [ 58 64 58 80 65 80 ]
+}
+{
+	id : 6
+	label : Charizard
+	species : Flame
+	types : [ Fire Flying ]
+	abilities : [ 14 0 144 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Monster Dragon ]
+	hatchCounter : 20
+	height : 1.700000
+	weight : 90.500000
+	baseExpYield : 240
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 0 0 3 0 0 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Red
+	baseStats : [ 78 84 78 109 85 100 ]
+}
+{
+	id : 123
+	label : Scyther
+	species : Mantis
+	types : [ Bug Flying ]
+	abilities : [ 159 165 151 ]
+	genderThreshold : 127
+	catchRate : 45
+	eggGroups : [ Bug ]
+	hatchCounter : 25
+	height : 1.500000
+	weight : 56.000000
+	baseExpYield : 100
+	baseFriendship : 70
+	expGroup : 2
+	evYield : [ 0 1 0 0 0 0 ]
+	bodyStyle : "Pokemon with a bipedal tailless form"
+	color : Green
+	baseStats : [ 70 110 80 55 80 105 ]
+}
+{
+	id : 127
+	label : Pinsir
+	species : Stagbeetle
+	types : [ Bug ]
+	abilities : [ 61 90 93 ]
+	genderThreshold : 127
+	catchRate : 45
+	eggGroups : [ Bug ]
+	hatchCounter : 25
+	height : 1.500000
+	weight : 55.000000
+	baseExpYield : 175
+	baseFriendship : 70
+	expGroup : 1
+	evYield : [ 0 2 0 0 0 0 ]
+	bodyStyle : "Pokemon with a bipedal tailless form"
+	color : Brown
+	baseStats : [ 65 125 100 55 70 85 ]
+}
+{
+	id : 252
+	label : Treecko
+	species : WoodGecko
+	types : [ Grass ]
+	abilities : [ 102 0 177 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Monster Dragon ]
+	hatchCounter : 20
+	height : 0.500000
+	weight : 5.000000
+	baseExpYield : 62
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 0 0 0 0 1 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Green
+	baseStats : [ 40 45 35 65 55 70 ]
+}
+{
+	id : 253
+	label : Grovyle
+	species : WoodGecko
+	types : [ Grass ]
+	abilities : [ 102 0 177 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Monster Dragon ]
+	hatchCounter : 20
+	height : 0.900000
+	weight : 21.600000
+	baseExpYield : 142
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 0 0 0 0 2 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Green
+	baseStats : [ 50 65 45 85 65 95 ]
+}
+{
+	id : 254
+	label : Sceptile
+	species : Forest
+	types : [ Grass ]
+	abilities : [ 102 0 177 ]
+	genderThreshold : 31
+	catchRate : 45
+	eggGroups : [ Monster Dragon ]
+	hatchCounter : 20
+	height : 1.700000
+	weight : 52.200000
+	baseExpYield : 239
+	baseFriendship : 70
+	expGroup : 4
+	evYield : [ 0 0 0 0 0 3 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Green
+	baseStats : [ 70 85 65 105 85 120 ]
+}
+{
+	id : 427
+	label : Buneary
+	species : Rabbit
+	types : [ Normal ]
+	abilities : [ 125 75 80 ]
+	genderThreshold : 127
+	catchRate : 190
+	eggGroups : [ Field HumanLike ]
+	hatchCounter : 20
+	height : 0.400000
+	weight : 5.500000
+	baseExpYield : 70
+	baseFriendship : 0
+	expGroup : 2
+	evYield : [ 0 0 0 0 0 1 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Brown
+	baseStats : [ 55 66 44 44 56 85 ]
+}
+{
+	id : 428
+	label : Lopunny
+	species : Rabbit
+	types : [ Normal ]
+	abilities : [ 25 75 80 ]
+	genderThreshold : 127
+	catchRate : 60
+	eggGroups : [ Field HumanLike ]
+	hatchCounter : 20
+	height : 1.200000
+	weight : 33.300000
+	baseExpYield : 168
+	baseFriendship : 140
+	expGroup : 2
+	evYield : [ 0 0 0 0 0 2 ]
+	bodyStyle : "Pokemon with a bipedal tailed form"
+	color : Brown
+	baseStats : [ 65 76 84 54 96 105 ]
+}

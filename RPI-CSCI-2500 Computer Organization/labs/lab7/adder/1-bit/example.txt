@@ -1,0 +1,17 @@
+bash-3.2$ ./adder
+Enter binary digit 0: 0
+Enter binary digit 1: 0
+0 + 0 = 0 without a carry
+bash-3.2$ ./adder
+Enter binary digit 0: 0
+Enter binary digit 1: 1
+0 + 1 = 1 without a carry
+bash-3.2$ ./adder
+Enter binary digit 0: 1
+Enter binary digit 1: 0
+1 + 0 = 1 without a carry
+bash-3.2$ ./adder
+Enter binary digit 0: 1
+Enter binary digit 1: 1
+1 + 1 = 0 with a carry
+bash-3.2$ exit

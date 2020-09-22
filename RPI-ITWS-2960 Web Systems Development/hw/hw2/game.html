@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hexed Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!-- jQuery Includes -->
+        <script src="resources/jquery-3.3.1.min.js"></script>
+        <link href="resources/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+        <script src="resources/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+        <script src="resources/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+        
+
+        <!-- Main Components -->
+        <script type="text/javascript" src="hexed.js"></script>  
+        <link href="resources/hexed.css" rel="stylesheet">
+
+        <script type="text/javascript">
+            function playGame() {
+
+                if ($("#NumTurns").val() < 1) {
+                    alert("Pick a valid turn number!");
+                } else {
+                    $("#game").hexed({
+                        difficulty : $( "#mySelect option:selected" ).text(),
+                        turns: $("#NumTurns").val()
+                    });
+                }
+
+
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class ="header text-center">
+            <h1 id="title">Hexxed</h1>
+        </div>
+        <div id="game">
+
+            
+                <h2>Test your knowledge of hexidecimal colors and try to guess the hex values of the presented color! Guess incorrectly, and you will be HEXXED!</h2>
+
+                <h2>Below, select the difficulty and the number of turns.
+                
+
+                <div id=submit>
+                    <br>
+                    <p>Select the difficulty!</p>
+                    <select id="mySelect">
+                      <option>0</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option selected="selected">5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                    </select>
+                    
+                    <p>Select the number of turns!</p>
+                    <input type="text" id="NumTurns" value="10"><br>
+                    <br>
+                    <input type="submit" onclick="playGame()" value="Start Game!">
+                </div>
+                
+           
+        </div>
+
+        
+        <!-- 
+        <div id="gameboard">
+            
+
+                
+            <div id="guess" class=swatch>
+                <h3>Guess:</h3>
+                <div class="containerz"></div>
+            </div>
+
+            <div id="target" class="swatch">
+                <h3>Target:</h3>
+                <div class="containerz"></div>
+            </div>
+
+
+            <h4 id="red-label">Red: 128</h4>
+            <div id="red"></div>
+
+            <h4 id="green-label">Green: 128</h4>
+            <div id="green"></div>
+
+            <h4 id="blue-label">Blue: 128</h4>
+            <div id="blue"></div>
+
+            <button id="calculate">Got it!</button>
+
+            <h5 id="total-score">Total Score: 0</h5>
+            <h5 id="last-score">Last Color\'s Score: 0 </h5>
+            <h5 id="turn">Turn Number: X of Y</h5>
+            <h5 id="difficulty">Difficulty: X</h5>
+
+        </div>  
+        -->
+       
+        
+
+    </body>
+</html>

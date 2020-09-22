@@ -1,0 +1,4 @@
+Cygwin Stuff
+cd "C:\Users\crabs_000\Dropbox\School\DataStructures\hw\hw5"
+memg++ *.cpp -o Ugh.exe -Wall
+drmemory -brief -batch -- Ugh.exe library_small.txt input_basic.txt out_library.txt out_songgroup.txt out_print.txt

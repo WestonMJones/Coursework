@@ -1,0 +1,12 @@
+4 4
++ arts
++ arid
++ east
++ rest
+- ear
+- at
+- sit
+- rrt
+
+
+

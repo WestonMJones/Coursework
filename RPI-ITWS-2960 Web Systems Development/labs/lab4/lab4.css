@@ -1,0 +1,50 @@
+
+
+
+/*Make sure that song title is in small-caps*/
+#title {
+	font-variant: small-caps;
+}
+
+/*the artist is in bold and in a 20 percent larger font*/
+#artist {
+	font-weight: bold;
+	font-size: 120%;
+}
+
+/*the album is italicized*/
+#album {
+	font-style: italic;
+}
+
+/*the release date and genres are in a proportionally reduced font size*/
+#date {
+	font-size: smaller;
+}
+
+/*and that the genres appear as a list with dashes.*/
+
+ul.genre {
+	font-size: smaller;
+    list-style: none;
+}
+
+ul.genre > li::before { /*selects the element right before the beginning of a new list entry */
+    content: "-";  /*alters the content of the before element to be a dash.*/
+}
+
+/*The album cover should appear with uniform size and in the center*/
+img {
+	width:200px;
+	height:200px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*There should be a border around your list as well*/
+body {
+	padding: 10px;
+	border-width: 10px;
+	border-style: dotted;
+}

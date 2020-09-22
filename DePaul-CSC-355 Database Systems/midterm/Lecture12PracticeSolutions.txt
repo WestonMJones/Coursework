@@ -1,0 +1,109 @@
+LECTURE 12 PRACTICE PROBLEM SOLUTIONS
+-------------------------------------
+
+Read 3.1-3.5 and make sure you understand:
+
+Boyce-Codd Normal Form
+Algorithm to decompose into BCNF relations
+Dependency Preservation property (and how to test for it)
+Lossless Join property (and how to test for it)
+
+
+For DVD(DVDID, MovieID, Title, Genre, Length Rating), we have
+
+F = { DVDID -> MovieID, Title, Genre, Length, Rating ;
+	MovieID -> Title, Genre, Length, Rating }
+
+1.
+
+What functional dependency stops DVD from being in BCNF?
+
+---
+
+Check the determinant of each functional dependency:
+
+{DVDID}+ = {DVDID, MovieID, Title, Genre, Length, Rating}
+{DVDID} is a superkey
+
+{MovieID}+ = {MovieID, Title, Genre, Length, Rating}
+{MovieID} is not a superkey -- so DVD is not in BCNF.
+
+---
+
+2.
+
+If we decompose DVD into relations in BCNF, what is the resulting decomposition?
+
+---
+
+DVD(DVDID, MovieID, Title, Genre, Length Rating)
+
+Removing MovieID -> Title, Genre, Length, Rating yields:
+
+R1(DVDID, MovieID)
+R2(MovieID, Title, Genre, Length, Rating)
+
+Both R1 and R2 are in BCNF, so this is the end result.
+
+---
+
+3.
+
+Find the projection of F on the two relations in your decomposition.
+
+---
+
+Projection on R1: DVDID -> MovieID
+
+Projection on R2: MovieID -> Title, Genre, Length, Rating
+
+---
+
+4.
+
+Does the decomposition have the dependency preservation property?  
+
+Explain why or why not.
+
+---
+
+Is the union of two projections  
+
+{ DVDID -> MovieID ; MovieID -> Title, Genre, Length, Rating }
+
+equivalent to F:
+
+Can we derive DVDID -> MovieID, Title, Genre, Length, Rating ?
+In the union, {DVDID}+ = {DVDID, MovieID, Title, Genre, Length, Rating}, so YES.
+
+Can we derive MovieID -> Title, Genre, Length, Rating }
+In the union, {MovieID, Title, Genre, Length, Rating}, so YES.
+
+Since the union of the projections can derive everything in F,
+the decomposition has the depencency preservation property.
+
+---
+
+5.
+
+Does the decompsition have the lossless join property?  
+
+Explain why or why not.
+
+---
+
+Using the binary lossless join test:
+
+R1 intersection R2 = {MovieID}
+
+R1 - R2 = {DVDID}
+R2 - R1 = {Title, Genre, Length Rating}
+
+Does MovieID -> DVDID? NO.
+Does MovieID -> Title, Genre, Length, Rating? YES.
+
+Therefore the decomposition has the lossless join property.
+
+---
+
+

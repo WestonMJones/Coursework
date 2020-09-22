@@ -1,0 +1,74 @@
+LECTURE 14 PRACTICE PROBLEMS
+----------------------------
+
+Read 3.1-3.5 and make sure you understand:
+
+Third Normal Form  (3NF)
+Minimal basis (and how to construct one)
+Algorithms for decomposition into BCNF and 3NF relations
+
+
+Consider the relation R(A, B, C, D),
+
+With F = {  A,B -> C,D  ;  C -> A,B,D  ;  D -> B  }
+
+1. Find a minimal basis for F.
+
+---
+
+A,B -> C
+C -> A
+C -> D
+D -> B
+
+---
+
+2. Use the minimal basis for F to find a decomposition of R into relations in 3NF.
+
+---
+
+R1(A,B,C)
+R2(C,A,D)
+R3(D,B)
+
+R1 contains candidate keys {C} and {A,B}, and
+R2 contains candidate keys {C} and {A,D}, so okay.
+No relations are redundant, so okay.
+
+---
+
+3. While it is probably not what you came up with for Question 1, the set
+	G = {  D->B  ;  C->B  ;  C->A  ;  A,B->D  ;  A,B->C  } is also a minimal
+	basis for F.  If you used G as your minimal basis in the 3NF decomposition
+	algorithm, what is the resulting decomposition?
+
+---
+
+We would start with R1(D,B), R2(C,B,A), R3(A,B,D,C).  
+However, R1 and R2 are redundant (subsets of R3),
+so we eliminate then and are left with just a single
+relation -- R3(A,B,D,C) -- which is the same as R!
+
+---
+
+4. Was R already in 3NF?
+
+---
+
+There are three candidate keys -- {C}, {A,B}, and {A,D}.
+Therefore all four attributes are prime, so the right
+side of every functional dependency is a prime attribute.
+So yes, R was already in 3NF.  This explains the result 
+of Question 3 -- we actually did not have to decompose R
+at all!
+
+---
+
+5. Was R already in BCNF?
+
+---
+
+No, the determinant of D->B is not a superkey.
+
+---
+

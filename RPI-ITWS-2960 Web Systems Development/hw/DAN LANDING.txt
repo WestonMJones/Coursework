@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class ="header text-center">
+        <h1>Hexxed</h1>
+</div>
+<div class ="container text-center">
+    <h2>Test your knowledge of hexidecimal colors and try to guess the hex values of the presented color! Guess incorrectly, and you will be HEXXED!</h2>
+    <div class="col-md-6 school-options-dropdown text-center">
+        <p>Click the dropdown to select your difficulty</p>
+        <div class="dropdown btn-group">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose a Dfficulty
+            <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">0</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class = "col-md-6">
+        <p>Enter the desired number of turns in the box</p>
+        <input type="number" id ="levels" min="1">
+    </div>
+    <div class = "col-md-12">
+        <input type="submit" value="Start Game!">
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $(".dropdown").on("show.bs.dropdown", function(event){
+        var x = $(event.relatedTarget).text(); // Get the button text
+    });
+});
+</script>
+
+</body>
+</html>

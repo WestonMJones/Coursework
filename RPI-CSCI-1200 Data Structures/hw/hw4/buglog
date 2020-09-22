@@ -1,0 +1,669 @@
+Multidivide fails assert test
+Look at function – seemed right
+Look at variables for assert test
+Change e
+Change h
+Change p
+Change r
+Couldn't start operations line 125 -- changed not equal to 4
+File could not be opned -- Add not to infile
+
+assertion "array[1][2] == -1" failed: file "operations.cpp", line 64, function: int array_operations()
+
+addd +1 to line 47 and 49
+
+
+Got same error
+
+Fixed operators on lines 58 and 59
+
+Segmentation fault yay -- Dr. memory time
+
+~~Dr.M~~
+~~Dr.M~~ Error #1: UNINITIALIZED READ: reading register eax
+~~Dr.M~~ # 0 modf                           [/usr/src/debug/mingw64-i686-runtime-5.0.1-1/math/modf.c:38]
+~~Dr.M~~ # 1 pythagoras                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:416]
+~~Dr.M~~ # 2 array_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:60]
+~~Dr.M~~ # 3 main                           [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:613]
+~~Dr.M~~
+~~Dr.M~~ Error #2: WARNING: writing to readonly memory 0x738652a5-0x738652ad
+~~Dr.M~~ # 0 modf                           [/usr/src/debug/mingw64-i686-runtime-5.0.1-1/math/modf.c:39]
+~~Dr.M~~ # 1 pythagoras                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:416]
+~~Dr.M~~ # 2 array_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:60]
+~~Dr.M~~ # 3 main                           [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:613]
+~~Dr.M~~ WARNING: application exited with abnormal code 0x1
+SEE PIC in write up
+
+Had to use task manager to close because Dr. Memory was freezing.
+
+Line 411 -- placeholder is declared as a pointer
+Looked over the code and found == equals error (417 and 423) and absolute value issue w/ hypothenuse -- might do this l8tr -- yeah
+also changed returning pointer randomly 418 and 424
+also added return -1 to the end
+
+
+Compilation error, modf does take pointers -- change to reference -- will need to describe this in detail
+
+Ran through dr memory again -- worked this time -- but assertion on line 66 failed
+
+Will bullshit how I traced back then put in abs
+
+Did that and then got seg fault -- super long one
+~~Dr.M~~
+~~Dr.M~~ Error #1: UNINITIALIZED READ: reading register eax
+~~Dr.M~~ # 0 array_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:85]
+~~Dr.M~~ # 1 main                           [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:614]
+~~Dr.M~~
+~~Dr.M~~ Error #2: UNADDRESSABLE ACCESS: reading 4 byte(s)
+~~Dr.M~~ # 0 array_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:85]
+~~Dr.M~~ # 1 main                           [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:614]
+~~Dr.M~~
+~~Dr.M~~ Error #3: POSSIBLE LEAK 4943408 bytes
+~~Dr.M~~ # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+~~Dr.M~~ # 1 file_operations                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:144]
+~~Dr.M~~ # 2 main                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:603]
+~~Dr.M~~
+~~Dr.M~~ Error #4: LEAK 17 bytes
+~~Dr.M~~ # 0 replace_operator_new                                  [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 std::__cxx11::basic_string<>::_M_create               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 __tmainCRTStartup                                     [/usr/src/debug/mingw64-i686-runtime-5.0.1-1/crt/crtexe.c:334]
+~~Dr.M~~ # 3 KERNEL32.dll!BaseThreadInitThunk                     +0x23     (0x76e662c4 <KERNEL32.dll+0x162c4>)
+~~Dr.M~~
+~~Dr.M~~ Error #5: POSSIBLE LEAK 104 direct bytes + 2600 indirect bytes
+~~Dr.M~~ # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+~~Dr.M~~ # 1 array_operations                         [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:47]
+~~Dr.M~~ # 2 main                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:614]
+~~Dr.M~~
+~~Dr.M~~ ERRORS FOUND:
+~~Dr.M~~       1 unique,     1 total unaddressable access(es)
+~~Dr.M~~       1 unique,     1 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       0 unique,     0 total warning(s)
+~~Dr.M~~       1 unique,     1 total,     17 byte(s) of leak(s)
+~~Dr.M~~       2 unique,     2 total, 4946112 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-decrypt.exe.42268.000\results.txt
+~~Dr.M~~ WARNING: application exited with abnormal code 0xc0000005
+Segmentation fault
+
+
+Went to line 85 and looked at code
+81, 83, and 84 got changed added the +1s and then ptr2
+
+Got another Dr. Memory screen
+Multidivide #1: 5 (expected 5).
+Multidivide #2: -10 (expected -10).
+Multidivide #3: -2 (expected -2).
+Multidivide #4: -5 (expected -5).
+Multidivide #5: 0 (expected 0.1).
+Finished the arithmetic operations
+Arithmetic bugs are FIXED
+
+Successfully opened the input file.
+Successfully read in 70 bytes of data.
+Finished the file operations
+File operations DOES NOT CRASH
+
+Printing the Pythagorean numbers array.
+ 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1  0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1  0  5  4 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1  5  0  3 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1  4  3  0 -1 -1 -1 -1 -1 -1 13 12 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1  0 -1 10 -1  8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1  0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 25 24
+-1 -1 -1 -1 -1 10 -1  0 -1  6 -1 -1 -1 -1 17 -1 15 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1  0 -1 -1 15 -1 -1 12 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1  8 -1  6 -1  0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 26 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1  0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 13 -1 -1 -1 15 -1 -1  0  5 -1  9 20 -1 -1 -1 16 -1 -1 -1 -1 -1
+-1 -1 -1 -1 12 -1 -1 -1 -1 -1 -1  5  0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1  0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 17 12 -1 -1  9 -1 -1  0 -1  8 -1 -1 25 -1 -1 -1 -1 20
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 20 -1 -1 -1  0 -1 -1 -1 12 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 15 -1 -1 -1 -1 -1 -1  8 -1  0 -1 -1 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1  0 -1 -1 -1 -1 -1 30 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1  0 -1 -1 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 16 -1 -1 25 12 -1 -1 -1  0 29 -1 -1 -1 15
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 29  0 -1 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1  0 -1 -1 -1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1  0 -1 -1
+-1 -1 -1 -1 -1 -1 25 -1 -1 26 -1 -1 -1 -1 -1 -1 -1 30 -1 -1 -1 -1 -1  0  7
+-1 -1 -1 -1 -1 -1 24 -1 -1 -1 -1 -1 -1 -1 20 -1 -1 -1 -1 15 -1 -1 -1  7  0
+Finished the array operations
+~~Dr.M~~
+~~Dr.M~~ Error #1: UNINITIALIZED READ: reading register eax
+~~Dr.M~~ # 0 array_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:105]
+~~Dr.M~~ # 1 main                           [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:614]
+Array bugs are FIXED
+
+~~Dr.M~~
+~~Dr.M~~ Error #2: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:304]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:447]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~
+~~Dr.M~~ Error #3: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:304]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:447]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+~~Dr.M~~
+~~Dr.M~~ Error #4: UNADDRESSABLE ACCESS beyond heap bounds: writing 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:304]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:447]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+~~Dr.M~~
+~~Dr.M~~ Error #5: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:306]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:447]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+~~Dr.M~~
+~~Dr.M~~ Error #6: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:304]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:448]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 32 byte(s) beyond memory that was freed here:
+~~Dr.M~~ Note: # 0 replace_operator_delete_nothrow                       [d:\drmemory_package\common\alloc_replace.c:2974]
+~~Dr.M~~ Note: # 1 __gnu_cxx::new_allocator<>::deallocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:110]
+~~Dr.M~~ Note: # 2 __gnu_cxx::__alloc_traits<>::deallocate               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/alloc_traits.h:185]
+~~Dr.M~~ Note: # 3 std::_Vector_base<>::_M_deallocate                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:178]
+~~Dr.M~~ Note: # 4 std::_Vector_base<>::~_Vector_base                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:160]
+~~Dr.M~~ Note: # 5 std::vector<>::~vector                                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:425]
+~~Dr.M~~
+~~Dr.M~~ Error #7: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:304]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:448]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+~~Dr.M~~
+~~Dr.M~~ Error #8: UNADDRESSABLE ACCESS beyond heap bounds: writing 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:304]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:448]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+~~Dr.M~~
+~~Dr.M~~ Error #9: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:306]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:448]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+~~Dr.M~~
+~~Dr.M~~ Error #10: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:304]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:449]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 28 byte(s) beyond memory that was freed here:
+~~Dr.M~~ Note: # 0 replace_operator_delete_nothrow                       [d:\drmemory_package\common\alloc_replace.c:2974]
+~~Dr.M~~ Note: # 1 __gnu_cxx::new_allocator<>::deallocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:110]
+~~Dr.M~~ Note: # 2 __gnu_cxx::__alloc_traits<>::deallocate               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/alloc_traits.h:185]
+~~Dr.M~~ Note: # 3 std::_Vector_base<>::_M_deallocate                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:178]
+~~Dr.M~~ Note: # 4 std::_Vector_base<>::~_Vector_base                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:160]
+~~Dr.M~~ Note: # 5 std::vector<>::~vector                                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:425]
+~~Dr.M~~
+~~Dr.M~~ Error #11: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:304]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:449]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+~~Dr.M~~
+~~Dr.M~~ Error #12: UNADDRESSABLE ACCESS beyond heap bounds: writing 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:304]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:449]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+~~Dr.M~~
+~~Dr.M~~ Error #13: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_sum                      [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:306]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:449]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.
+Assertion failed!
+
+Program: C:\Users\crabs_000\Dropbox\School\DataStructures\hw\hw4\decrypt.exe
+File: operations.cpp, Line 451
+
+Expression: v1[2] == 75
+~~Dr.M~~
+~~Dr.M~~ Error #14: LEAK 104 bytes
+~~Dr.M~~ # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+~~Dr.M~~ # 1 array_operations                         [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:49]
+~~Dr.M~~ # 2 main                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:614]
+~~Dr.M~~
+~~Dr.M~~ ERRORS FOUND:
+~~Dr.M~~      12 unique,    12 total unaddressable access(es)
+~~Dr.M~~       1 unique,     1 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       0 unique,     0 total warning(s)
+~~Dr.M~~       1 unique,     1 total,    104 byte(s) of leak(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-decrypt.exe.65780.000\results.txt
+~~Dr.M~~ WARNING: application exited with abnormal code 0x3
+
+Fixed =1 and added = in comparison operator in 105 area
+
+then jumped to 30 whatever to find vector sum
+
+
+
+Next day
+
+Assertion on line 451 failed
+Added i+1 to pushback on line 438
+made counter = 0; 465
+
+Still failed so checked out vector sum method -- added reference thing to function and definition above in class
+or whatever
+
+Then assertion failed on Line 500
+
+Checked Vector compare function
+
+Switched booleans around sorta -- ran again and got this dr. mem error. 
+
+~~Dr.M~~
+~~Dr.M~~ Error #1: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_compare                  [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:389]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:504]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+~~Dr.M~~
+~~Dr.M~~ Error #2: UNADDRESSABLE ACCESS beyond heap bounds: reading 4 byte(s)
+~~Dr.M~~ # 0 vector_compare                  [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:389]
+~~Dr.M~~ # 1 vector_operations               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:505]
+~~Dr.M~~ # 2 main                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~ Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Now counting numbers divisible by 3
+~~Dr.M~~
+~~Dr.M~~ Error #3: WARNING: heap allocation failed
+~~Dr.M~~ # 0 replace_operator_new                                [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 __gnu_cxx::new_allocator<>::allocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 __gnu_cxx::__alloc_traits<>::allocate               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/alloc_traits.h:182]
+~~Dr.M~~ # 3 std::_Vector_base<>::_M_allocate                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:170]
+~~Dr.M~~ # 4 std::vector<>::_M_insert_aux                        [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/vector.tcc:353]
+~~Dr.M~~ # 5 std::vector<>::push_back                            [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:925]
+~~Dr.M~~ # 6 vector_operations                                   [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:526]
+~~Dr.M~~ # 7 main                                                [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~
+~~Dr.M~~ ERRORS FOUND:
+~~Dr.M~~       2 unique,    10 total unaddressable access(es)
+~~Dr.M~~       0 unique,     0 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       1 unique,     1 total warning(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of leak(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-decrypt.exe.55360.000\results.txt
+~~Dr.M~~ WARNING: application exited with abnormal code 0x1
+
+Think it has something to do with the v5 being shorter than vector 2 -- not sure how to fix though without altering source substantially
+
+Started to use debugger so compiled using syntax from lab 4 -- threw some warnings that I fixed
+
+fixed buffer size by googling how long they should be ... I guess
+
+operations.cpp: In function ‘int list_operations()’:
+operations.cpp:256:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i=0; i<itr->size(); ++i) {
+                   ^
+operations.cpp: In function ‘int vector_operations()’:
+operations.cpp:522:36: warning: for increment expression has no effect [-Wunused-value]
+   for(uint i = 0; i < all.size(); i+1) {
+                                    ^
+operations.cpp: In function ‘bool file_operations(int, char**, char*&, int&)’:
+operations.cpp:144:33: warning: ‘length’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   char* buffer = new char[length];
+
+Hoped that this might fix errors -- ran normally
+
+Got a seg fault and dislayed a lot of data from threes array.
+
+Ran through Dr. Memory
+
+~~Dr.M~~
+~~Dr.M~~ Error #8: LEAK 17 bytes
+~~Dr.M~~ # 0 replace_operator_new                                  [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 std::__cxx11::basic_string<>::_M_create               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 __tmainCRTStartup                                     [/usr/src/debug/mingw64-i686-runtime-5.0.1-1/crt/crtexe.c:334]
+~~Dr.M~~ # 3 KERNEL32.dll!BaseThreadInitThunk                     +0x23     (0x76e662c4 <KERNEL32.dll+0x162c4>)
+~~Dr.M~~
+~~Dr.M~~ Error #9: LEAK 1024 bytes
+~~Dr.M~~ # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+~~Dr.M~~ # 1 file_operations                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:144]
+~~Dr.M~~ # 2 main                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:603]
+~~Dr.M~~
+~~Dr.M~~ Error #10: LEAK 28 bytes
+~~Dr.M~~ # 0 replace_operator_new                                  [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 __gnu_cxx::new_allocator<>::allocate                  [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 __gnu_cxx::__alloc_traits<>::allocate                 [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/alloc_traits.h:182]
+~~Dr.M~~ # 3 std::_Vector_base<>::_M_allocate                      [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:170]
+~~Dr.M~~ # 4 std::vector<>::_M_initialize_dispatch<>               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:1249]
+~~Dr.M~~ # 5 std::vector<>::vector<>                               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:413]
+~~Dr.M~~ # 6 vector_operations                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:434]
+~~Dr.M~~ # 7 main                                                  [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~
+~~Dr.M~~ Error #11: LEAK 64 bytes
+~~Dr.M~~ # 0 replace_operator_new                                [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 __gnu_cxx::new_allocator<>::allocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 __gnu_cxx::__alloc_traits<>::allocate               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/alloc_traits.h:182]
+~~Dr.M~~ # 3 std::_Vector_base<>::_M_allocate                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:170]
+~~Dr.M~~ # 4 std::vector<>::_M_insert_aux                        [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/vector.tcc:353]
+~~Dr.M~~ # 5 std::vector<>::push_back                            [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:925]
+~~Dr.M~~ # 6 vector_operations                                   [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:438]
+~~Dr.M~~ # 7 main                                                [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~
+~~Dr.M~~ Error #12: LEAK 64 bytes
+~~Dr.M~~ # 0 replace_operator_new                                [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 __gnu_cxx::new_allocator<>::allocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 __gnu_cxx::__alloc_traits<>::allocate               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/alloc_traits.h:182]
+~~Dr.M~~ # 3 std::_Vector_base<>::_M_allocate                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:170]
+~~Dr.M~~ # 4 std::vector<>::_M_insert_aux                        [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/vector.tcc:353]
+~~Dr.M~~ # 5 std::vector<>::push_back                            [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:925]
+~~Dr.M~~ # 6 vector_operations                                   [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:443]
+~~Dr.M~~ # 7 main                                                [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~
+~~Dr.M~~ Error #13: LEAK 32 bytes
+~~Dr.M~~ # 0 replace_operator_new                                [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 __gnu_cxx::new_allocator<>::allocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 __gnu_cxx::__alloc_traits<>::allocate               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/alloc_traits.h:182]
+~~Dr.M~~ # 3 std::_Vector_base<>::_M_allocate                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:170]
+~~Dr.M~~ # 4 std::vector<>::_M_insert_aux                        [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/vector.tcc:353]
+~~Dr.M~~ # 5 std::vector<>::push_back                            [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:925]
+~~Dr.M~~ # 6 vector_operations                                   [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:482]
+~~Dr.M~~ # 7 main                                                [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~
+~~Dr.M~~ Error #14: LEAK 16 bytes
+~~Dr.M~~ # 0 replace_operator_new                                [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 __gnu_cxx::new_allocator<>::allocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 __gnu_cxx::__alloc_traits<>::allocate               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/alloc_traits.h:182]
+~~Dr.M~~ # 3 std::_Vector_base<>::_M_allocate                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:170]
+~~Dr.M~~ # 4 std::vector<>::_M_insert_aux                        [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/vector.tcc:353]
+~~Dr.M~~ # 5 std::vector<>::push_back                            [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:925]
+~~Dr.M~~ # 6 vector_operations                                   [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:488]
+~~Dr.M~~ # 7 main                                                [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~
+~~Dr.M~~ Error #15: LEAK 224 bytes
+~~Dr.M~~ # 0 replace_operator_new                                [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 __gnu_cxx::new_allocator<>::allocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 __gnu_cxx::__alloc_traits<>::allocate               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/alloc_traits.h:182]
+~~Dr.M~~ # 3 std::_Vector_base<>::_M_allocate                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:170]
+~~Dr.M~~ # 4 std::vector<>::_M_range_insert<>                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/vector.tcc:659]
+~~Dr.M~~ # 5 std::vector<>::_M_insert_dispatch<>                 [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:1377]
+~~Dr.M~~ # 6 std::vector<>::insert<>                             [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:1125]
+~~Dr.M~~ # 7 vector_operations                                   [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:513]
+~~Dr.M~~ # 8 main                                                [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~
+~~Dr.M~~ Error #16: LEAK 64 bytes
+~~Dr.M~~ # 0 replace_operator_new                                [d:\drmemory_package\common\alloc_replace.c:2899]
+~~Dr.M~~ # 1 __gnu_cxx::new_allocator<>::allocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:104]
+~~Dr.M~~ # 2 __gnu_cxx::__alloc_traits<>::allocate               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/alloc_traits.h:182]
+~~Dr.M~~ # 3 std::_Vector_base<>::_M_allocate                    [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:170]
+~~Dr.M~~ # 4 std::vector<>::_M_insert_aux                        [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/vector.tcc:353]
+~~Dr.M~~ # 5 std::vector<>::push_back                            [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_vector.h:925]
+~~Dr.M~~ # 6 vector_operations                                   [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:526]
+~~Dr.M~~ # 7 main                                                [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:624]
+~~Dr.M~~
+~~Dr.M~~ ERRORS FOUND:
+~~Dr.M~~       3 unique,  2206 total unaddressable access(es)
+~~Dr.M~~       4 unique, 20152 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       0 unique,     0 total warning(s)
+~~Dr.M~~       9 unique,     9 total,   1533 byte(s) of leak(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-decrypt.exe.32264.000\results.txt
+~~Dr.M~~ WARNING: application exited with abnormal code 0xc0000005
+Segmentation fault
+
+Got too many errors to really make sense of, so decided to just look at relevant code and look for problems.
+
+Noticed counter was never initialized 
+ALso noticed that the modulus operator was dealing with i and not the value of all.
+Also noticed it was push_backing i instead of all[i]
+
+Recompiled and noticed that counter was declared above -- changed that to unsigned int again
+
+Got much shorter display of 3's array but still got a segmentation fualt  -- trying to run through Dr. Memory
+
+Larger array of 3s is back  -- maybe forgot to save something last time.
+
+Looked at coe and figured that the super long list was because of a error in the condition for the print backwards loop
+
+The comparison seemed okay so go went back and looked at int -- shouldn't be unsigned -- not sure why I guess I'll have to BS this.
+
+Something about this fixed it so I got this.
+
+~~Dr.M~~
+~~Dr.M~~ Error #3: UNADDRESSABLE ACCESS of freed memory: reading 4 byte(s)
+~~Dr.M~~ # 0 std::_List_iterator<>::operator++               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_list.h:159]
+~~Dr.M~~ # 1 list_operations                                 [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:195]
+~~Dr.M~~ # 2 main                                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:636]
+~~Dr.M~~ Note: refers to memory that was freed here:
+~~Dr.M~~ Note: # 0 replace_operator_delete_nothrow                       [d:\drmemory_package\common\alloc_replace.c:2974]
+~~Dr.M~~ Note: # 1 __gnu_cxx::new_allocator<>::deallocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:110]
+~~Dr.M~~ Note: # 2 std::__cxx11::_List_base<>::_M_put_node               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_list.h:396]
+~~Dr.M~~ Note: # 3 std::__cxx11::list<>::_M_erase                        [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_list.h:1781]
+~~Dr.M~~ Note: # 4 std::__cxx11::list<>::erase                           [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/list.tcc:156]
+~~Dr.M~~ Note: # 5 list_operations                                       [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:197]
+elderberry quart nectarine orange zwetschge pomegranate durian grape yellow squash fig iodine strawberry tangerine jujube lemon mango cherry uglyfruit apple watermelon kiwi
+~~Dr.M~~
+~~Dr.M~~ Error #4: UNINITIALIZED READ: reading register ebx
+~~Dr.M~~ # 0 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:875]
+~~Dr.M~~ # 1 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 2 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 3 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:636]
+~~Dr.M~~
+~~Dr.M~~ Error #5: UNINITIALIZED READ: reading register edx
+~~Dr.M~~ # 0 std::__int_to_char<>                          [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:801]
+~~Dr.M~~ # 1 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:876]
+~~Dr.M~~ # 2 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 3 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 4 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:636]
+~~Dr.M~~
+~~Dr.M~~ Error #6: UNINITIALIZED READ: reading register ecx
+~~Dr.M~~ # 0 std::__int_to_char<>                          [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:803]
+~~Dr.M~~ # 1 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:876]
+~~Dr.M~~ # 2 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 3 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 4 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:636]
+~~Dr.M~~
+~~Dr.M~~ Error #7: UNINITIALIZED READ: reading register ecx
+~~Dr.M~~ # 0 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:896]
+~~Dr.M~~ # 1 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 2 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 3 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:636]
+13893112 letters did not ever appear in the fruit names.
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.
+Assertion failed!
+
+Program: C:\Users\crabs_000\Dropbox\School\DataStructures\hw\hw4\decrypt.exe
+File: operations.cpp, Line 273
+
+Expression: *l1.begin() == 'A'
+~~Dr.M~~
+~~Dr.M~~ ERRORS FOUND:
+~~Dr.M~~       3 unique,   504 total unaddressable access(es)
+~~Dr.M~~       4 unique,     4 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       0 unique,     0 total warning(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of leak(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-decrypt.exe.36212.000\results.txt
+~~Dr.M~~ WARNING: application exited with abnormal code 0x3
+
+Those vector comparison errors are popping up again so I should go back and fx them.
+
+Add a min function to prevent over reading -- fixed Dr. Memory errors initially -- now onto this:
+
+~~Dr.M~~
+~~Dr.M~~ Error #1: UNADDRESSABLE ACCESS of freed memory: reading 4 byte(s)
+~~Dr.M~~ # 0 std::_List_iterator<>::operator++               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_list.h:159]
+~~Dr.M~~ # 1 list_operations                                 [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:195]
+~~Dr.M~~ # 2 main                                            [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:644]
+~~Dr.M~~ Note: refers to memory that was freed here:
+~~Dr.M~~ Note: # 0 replace_operator_delete_nothrow                       [d:\drmemory_package\common\alloc_replace.c:2974]
+~~Dr.M~~ Note: # 1 __gnu_cxx::new_allocator<>::deallocate                [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/ext/new_allocator.h:110]
+~~Dr.M~~ Note: # 2 std::__cxx11::_List_base<>::_M_put_node               [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_list.h:396]
+~~Dr.M~~ Note: # 3 std::__cxx11::list<>::_M_erase                        [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/stl_list.h:1781]
+~~Dr.M~~ Note: # 4 std::__cxx11::list<>::erase                           [/usr/lib/gcc/i686-w64-mingw32/5.4.0/include/c++/bits/list.tcc:156]
+~~Dr.M~~ Note: # 5 list_operations                                       [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:197]
+elderberry quart nectarine orange zwetschge pomegranate durian grape yellow squash fig iodine strawberry tangerine jujube lemon mango cherry uglyfruit apple watermelon kiwi
+~~Dr.M~~
+~~Dr.M~~ Error #2: UNINITIALIZED READ: reading register ebx
+~~Dr.M~~ # 0 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:875]
+~~Dr.M~~ # 1 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 2 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 3 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:644]
+~~Dr.M~~
+~~Dr.M~~ Error #3: UNINITIALIZED READ: reading register edx
+~~Dr.M~~ # 0 std::__int_to_char<>                          [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:801]
+~~Dr.M~~ # 1 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:876]
+~~Dr.M~~ # 2 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 3 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 4 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:644]
+~~Dr.M~~
+~~Dr.M~~ Error #4: UNINITIALIZED READ: reading register ecx
+~~Dr.M~~ # 0 std::__int_to_char<>                          [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:803]
+~~Dr.M~~ # 1 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:876]
+~~Dr.M~~ # 2 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 3 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 4 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:644]
+~~Dr.M~~
+~~Dr.M~~ Error #5: UNINITIALIZED READ: reading register ecx
+~~Dr.M~~ # 0 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:896]
+~~Dr.M~~ # 1 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 2 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 3 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:644]
+13893112 letters did not ever appear in the fruit names.
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.
+Assertion failed!
+
+Program: C:\Users\crabs_000\Dropbox\School\DataStructures\hw\hw4\decrypt.exe
+File: operations.cpp, Line 273
+
+Expression: *l1.begin() == 'A'
+~~Dr.M~~
+~~Dr.M~~ ERRORS FOUND:
+~~Dr.M~~       1 unique,   494 total unaddressable access(es)
+~~Dr.M~~       4 unique,     4 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       0 unique,     0 total warning(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of leak(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-decrypt.exe.33152.000\results.txt
+~~Dr.M~~ WARNING: application exited with abnormal code 0x3
+
+Decided to look at beginning of list operations method
+
+Set breakpoint after 185 -- Everything all good
+Now at line 195 -- this is where the problems start 
+
+Found that on second iteration through the loop there was this error
+
+Program received signal SIGABRT, Aborted.
+0x0000000100405f00 in __gnu_cxx::new_allocator<std::_List_node<int> >::deallocate (
+    this=0x6, __p=0x303e90000a8d0)
+    at /usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include/c++/ext/new_allocator.h:110
+110           { ::operator delete(__p); }
+(gdb)
+
+I tried printing the value of iterator but it was some random memory location
+
+Found that I had to use *itr instead -- got 1 the first time
+
+Process documented in word doc 
+
+Dr. Memory run after fixing iteration bug
+
+~~Dr.M~~
+~~Dr.M~~ Error #1: UNINITIALIZED READ: reading register ebx
+~~Dr.M~~ # 0 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:875]
+~~Dr.M~~ # 1 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 2 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 3 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:644]
+~~Dr.M~~
+~~Dr.M~~ Error #2: UNINITIALIZED READ: reading register edx
+~~Dr.M~~ # 0 std::__int_to_char<>                          [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:801]
+~~Dr.M~~ # 1 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:876]
+~~Dr.M~~ # 2 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 3 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 4 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:644]
+~~Dr.M~~
+~~Dr.M~~ Error #3: UNINITIALIZED READ: reading register ecx
+~~Dr.M~~ # 0 std::__int_to_char<>                          [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:803]
+~~Dr.M~~ # 1 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:876]
+~~Dr.M~~ # 2 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 3 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 4 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:644]
+~~Dr.M~~
+~~Dr.M~~ Error #4: UNINITIALIZED READ: reading register ecx
+~~Dr.M~~ # 0 std::num_put<>::_M_insert_int<>               [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.tcc:896]
+~~Dr.M~~ # 1 std::num_put<>::do_put                        [/cygdrive/i/szsz/tmpp/cygwin64/mingw64-i686/mingw64-i686-gcc-5.4.0-3.x86_64/src/gcc-5.4.0/libstdc++-v3/include/bits/locale_facets.h:2510]
+~~Dr.M~~ # 2 list_operations                               [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:271]
+~~Dr.M~~ # 3 main                                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:644]
+13893112 letters did not ever appear in the fruit names.
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.
+Assertion failed!
+
+Program: C:\Users\crabs_000\Dropbox\School\DataStructures\hw\hw4\decrypt.exe
+File: operations.cpp, Line 273
+
+
+On 271 it's just a print statement so I just made count a thing
+
+That made all the memory errors go away -- YAY! -- now assertion on 273 failed.
+
+Took out the ++ on line 243
+
+Changed unit to int
+
+Changed to use right iterators
+
+Changed second loop backwards thing in the array
+
+Decryption failed or was incomplete
+~~Dr.M~~
+~~Dr.M~~ Error #1: LEAK 1024 bytes
+~~Dr.M~~ # 0 replace_operator_new_array               [d:\drmemory_package\common\alloc_replace.c:2928]
+~~Dr.M~~ # 1 file_operations                          [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:144]
+~~Dr.M~~ # 2 main                                     [/cygdrive/c/Users/crabs_000/Dropbox/School/DataStructures/hw/hw4/operations.cpp:615]
+~~Dr.M~~
+~~Dr.M~~ ERRORS FOUND:
+~~Dr.M~~       0 unique,     0 total unaddressable access(es)
+~~Dr.M~~       0 unique,     0 total uninitialized access(es)
+~~Dr.M~~       0 unique,     0 total invalid heap argument(s)
+~~Dr.M~~       0 unique,     0 total GDI usage error(s)
+~~Dr.M~~       0 unique,     0 total handle leak(s)
+~~Dr.M~~       0 unique,     0 total warning(s)
+~~Dr.M~~       1 unique,     1 total,   1024 byte(s) of leak(s)
+~~Dr.M~~       0 unique,     0 total,      0 byte(s) of possible leak(s)
+~~Dr.M~~ Details: C:\Users\crabs_000\AppData\Roaming\Dr. Memory\DrMemory-decrypt.exe.73524.000\results.txt
+~~Dr.M~~ WARNING: application exited with abnormal code 0x1
+
+Solved memory leak by deleting file buffer -- just put it in successful test case though
+
+No that list operations still aren't working
+
+Fixed the not equals to stuff
+
+

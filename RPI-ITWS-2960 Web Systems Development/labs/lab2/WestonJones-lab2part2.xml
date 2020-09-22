@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<favorite_songs>
+	<song>
+		<track>1</track>
+		<name>Caught In The Middle</name>
+		<artist>Paramore</artist>
+		<artist_website>http://www.paramore.net</artist_website>
+		<album>After Laughter</album>
+		<album_link>https://www.allmusic.com/album/after-laughter-mw0003039874</album_link>
+		<album_art>https://cps-static.rovicorp.com/3/JPG_500/MI0004/228/MI0004228504.jpg?partner=allrovi.com</album_art>
+		<release>2017</release>
+		<genre>Rock, Electropop</genre>
+	</song>
+	<song>
+		<track>2</track>
+		<name>Ribs</name>
+		<artist>Lorde</artist>
+		<artist_website>https://lorde.co.nz/</artist_website>
+		<album>Pure Heroine</album>
+		<album_link>https://www.allmusic.com/album/pure-heroine-mw0002574004</album_link>
+		<album_art>https://cps-static.rovicorp.com/3/JPG_500/MI0003/624/MI0003624281.jpg?partner=allrovi.com</album_art>
+		<release>2013</release>
+		<genre>Alternative/Indie, Electropop</genre>
+	</song>
+	<song>
+		<track>3</track>
+		<name>Sincerity Is Scary</name>
+		<artist>The 1975</artist>
+		<artist_website>https://the1975.com/</artist_website>
+		<album>A Brief Inquiry Into Online Relationships</album>
+		<album_link>https://www.allmusic.com/album/a-brief-inquiry-into-online-relationships-mw0003209553</album_link>
+		<album_art>https://cps-static.rovicorp.com/3/JPG_1080/MI0004/483/MI0004483160.jpg?partner=allrovi.com</album_art>
+		<release>2018</release>
+		<genre>Rock, Pop</genre>
+	</song>
+	<song>
+		<track>4</track>
+		<name>Too Much to Dream</name>
+		<artist>Allie X</artist>
+		<artist_website>http://alliex.com/</artist_website>
+		<album>Collxtion II</album>
+		<album_link>https://www.allmusic.com/album/collxtion-ii-mw0003059481</album_link>
+		<album_art>https://cps-static.rovicorp.com/3/JPG_500/MI0004/249/MI0004249126.jpg?partner=allrovi.com</album_art>
+		<release>2017</release>
+		<genre>Pop</genre>
+	</song>
+	<song>
+		<track>5</track>
+		<name>Dancing's Not a Crime</name>
+		<artist>Panic! At The Disco</artist>
+		<artist_website>https://panicatthedisco.com/</artist_website>
+		<album>Pray for the Wicked</album>
+		<album_link>https://www.allmusic.com/album/pray-for-the-wicked-mw0003171255</album_link>
+		<album_art>https://cdn-s3.allmusic.com/release-covers/500/0004/890/0004890050.jpg</album_art>
+		<release>2018</release>
+		<genre>Pop</genre>
+	</song>
+	<song>
+		<track>6</track>
+		<name>Dreams Tonight</name>
+		<artist>Alvvays</artist>
+		<artist_website>http://alvvays.com/</artist_website>
+		<album>Antisocialities</album>
+		<album_link>https://www.allmusic.com/album/antisocialites-mw0003057897</album_link>
+		<album_art>https://cps-static.rovicorp.com/3/JPG_500/MI0004/293/MI0004293716.jpg?partner=allrovi.com</album_art>
+		<release>2017</release>
+		<genre>Alternative/Indie</genre>
+	</song>
+
+</favorite_songs>
