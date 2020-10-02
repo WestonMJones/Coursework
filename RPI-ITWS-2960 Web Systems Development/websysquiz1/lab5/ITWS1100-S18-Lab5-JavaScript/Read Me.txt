@@ -1,3 +1,0 @@
-file:///C:/Users/crabs_000/Dropbox/School/Intro%20to%20ITWS/Labs/lab5/ITWS1100-S18-Lab5-JavaScript/lab5.html
-
-This was a pretty straight forward lab, the template we were provided was pretty nice and made things easy.
