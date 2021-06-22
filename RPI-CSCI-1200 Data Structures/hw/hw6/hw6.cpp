@@ -1,3 +1,44 @@
+/* 
+In this homework we will build an inverse word search program using the techniques of recursion. The goal
+is to construct a grid of letters that one can search to find specific words. Understanding the non-linear word
+search program from Lectures 13 & 14 will be helpful in thinking about how you will solve this problem.
+We strongly urge you to study and play with that program, including tracing through its behavior using a
+debugger or cout statements or both. Please read the entire handout before beginning your implementation.
+
+For this assignment, you will be given the dimensions (width and height) of a word search puzzle, a set of
+words that should appear in the grid (forwards, backwards, up, down, or along any diagonal), and optionally
+a set of words that should not appear anywhere in the grid. Each grid cell will be assigned one of the 26
+lowercase letters. Note that unlike the non-linear word search problem we discussed in class, we will only
+allow words that appear in a straight line (including diagonals). Your task is to output all unique word
+search grids that satisfy the requirements. Rotations and mirroring of the board will be considered unique
+solutions.
+
+Your program should expect three command line arguments, the name of the input file, the name of the
+output file, and a string:
+
+inverse_word_search.exe puzzle2.txt out2.txt one_solution
+inverse_word_search.exe puzzle2.txt out2.txt all_solutions
+
+The third argument indicates whether the program should find all solutions, or just one solution. Here’s an
+example of the input file format:
+
+4 4
++ arts
++ arid
++ east
++ rest
+- ear
+- at
+- sit
+
+The first line specifies the width and height of the grid. Then each line that follows contains a character
+and a word. If the character is ’+’, then the word must appear in the grid. If the character is ’-’, then the
+word must not appear in the grid.
+
+To implement this assignment, you must use recursion in your search. First you should tackle the problem
+of finding and outputting one legal solution to the puzzle (if one exists). 
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
